@@ -3,14 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/core": "^10.0.7",
+    "@emotion/styled": "^10.0.7",
     "bootstrap": "^4.3.1",
+    "emotion-theming": "^10.0.7",
     "gh-pages": "^2.1.1",
+    "import-all.macro": "^2.0.3",
+    "mdx.macro": "^0.2.9",
+    "node-sass": "^4.13.0",
     "pm2": "^4.1.2",
+    "radium": "^0.26.0",
     "react": "^16.11.0",
+    "react-animations": "^1.0.0",
     "react-bootstrap": "^1.0.0-beta.14",
     "react-dom": "^16.11.0",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.1.2",
-    "serve": "^11.2.0"
+    "serve": "^11.2.0",
+    "styled-components": "^4.4.1"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -35,5 +45,5 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://alexandre46.github.io/react-personal/"
+  "homepage": "https://alexandreabreu46.site/"
 }

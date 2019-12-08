@@ -4,33 +4,36 @@ import { Table } from 'react-bootstrap';
 class MyTable extends Component {
   render() {
     return (
-      <Table class="table bg-dark w-100">
-        <thead>
-          Lang Framework/Lib used :
-          <tr>
-            <th>Name</th>
-            <th>%</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>HTML</td>
-            <td>25/100%</td>
-          </tr>
-          <tr>
-            <td>CSS</td>
-            <td>25/100%</td>
-          </tr>
-          <tr>
-            <td>JS</td>
-            <td>25/100%</td>
-          </tr>
-          <tr>
-            <td>PHP</td>
-            <td>25/100%</td>
-          </tr>
-        </tbody>
-      </Table>
+      <div class="my-3">
+        <Table striped bordered hover responsive="sm">
+          <thead>
+            My Experience :
+            <tr>
+              <th>Topic</th>
+              <th>Knowledge (in years)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="font-weight-bolder">HTML</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td class="font-weight-bolder">CSS</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td class="font-weight-bolder">JS</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td class="font-weight-bolder">PHP</td>
+              <td>3</td>
+            </tr>
+          </tbody>
+        </Table>
+      </div>
+      
     )
   }
 }

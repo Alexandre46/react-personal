@@ -25,8 +25,8 @@ class Clock extends React.Component {
   
     render() {
       return (
-        <div>
-          <h2>Time -> {this.state.date.toLocaleTimeString()}.</h2>
+        <div class="clock float-right my-auto">
+          <h2 class="font-weight-bold">{this.state.date.toLocaleTimeString()}</h2>
         </div>
       );
     }
