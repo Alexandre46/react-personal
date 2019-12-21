@@ -12,6 +12,7 @@ import AboutMe from './AboutMe';
 import Welcome from './welcome';
 import MyProjects from './Projects';
 import BlogPosts from './Blog';
+import Contact from './contact';
 
 const urlPreffix = 'react-personal';
 
@@ -35,6 +36,9 @@ const urlPreffix = 'react-personal';
                 <li class="list-group-item">
                     <Link to="/about-me">About me </Link>
                 </li>
+                <li class="list-group-item">
+                    <Link to="/contact">Contact </Link>
+                </li>
             </ul>
           <Switch>
             <Route exact path="/">
@@ -54,6 +58,9 @@ const urlPreffix = 'react-personal';
             </Route>
             <Route path="/about-me">
                 <AboutMe />
+            </Route>
+            <Route path="/contact">
+                <Contact />
             </Route>
           </Switch>
         </div>  
@@ -78,6 +85,12 @@ const urlPreffix = 'react-personal';
   function About() {
     return (
       <AboutMe />
+    );
+  }
+
+  function ContactMe() {
+    return (
+      <Contact />
     );
   }
   
