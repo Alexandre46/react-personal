@@ -30,17 +30,17 @@ function sendEmail(e) {
 
             <input type="hidden" name="contact_number" class="pt-3" />
             <FormLabel>Name</FormLabel>
-            <input class="form-control input" type="text" name="name" />
+            <input class="form-control input" type="text" name="name" required/>
         </div>
 
         <div class="col-12 form-group">
             <FormLabel>Email</FormLabel>
-            <input class="form-control input" type="email" name="email" />
+            <input class="form-control input" type="email" name="email" required/>
         </div>
 
         <div class="col-12 form-group">
             <FormLabel>Message</FormLabel>
-            <textarea class="form-control form-text" name="message" />
+            <textarea class="form-control form-text" name="message" required/>
         </div>
 
         <div class="col-12 form-group">

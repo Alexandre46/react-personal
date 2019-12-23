@@ -19,25 +19,25 @@ const urlPreffix = 'react-personal';
   export default function Navigation() {
     return (
       <Router>
-          <div>
-            <ul class="list-group list-group-horizontal">
-                <li class="list-group-item">
-                    <Link to="/">Home</Link>
+          <div class="nav-collapse collapsed">
+            <ul class="navbar">
+                <li class="col-12 col-lg-2 btn btn-outline-secondary nav-item nav-link">
+                    <Link to="/" className="nav-link">Home</Link>
                 </li>
-                <li class="list-group-item">
-                    <Link to="/blog"> 🚀 Blog</Link>
+                <li class="col-12 col-lg-2 btn btn-outline-secondary nav-item nav-link">
+                    <Link to="/blog" className="nav-link"> Blog 🚀 </Link>
                 </li>
-                <li class="list-group-item">
-                    <Link to="/projects">Projects</Link>
+                <li class="col-12 col-lg-2 btn btn-outline-secondary nav-item nav-link">
+                    <Link to="/projects" className="nav-link">Projects</Link>
                 </li>
-                <li class="list-group-item">
-                    <Link to="/skills">Skills</Link>
+                <li class="col-12 col-lg-2 btn btn-outline-secondary nav-item nav-link">
+                    <Link to="/skills" className="nav-link">Skills</Link>
                 </li>
-                <li class="list-group-item">
-                    <Link to="/about-me">About me </Link>
+                <li class="col-12 col-lg-2 btn btn-outline-secondary nav-item nav-link">
+                    <Link to="/about-me" className="nav-link">About me </Link>
                 </li>
-                <li class="list-group-item">
-                    <Link to="/contact">Contact </Link>
+                <li class="col-12 col-lg-2 btn btn-outline-secondary nav-item nav-link">
+                    <Link to="/contact" className="nav-link">Contact </Link>
                 </li>
             </ul>
           <Switch>
