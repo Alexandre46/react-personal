@@ -1,3 +1,5 @@
 {
-    "introInitial" : "Welcome"
+    "translations" : {
+        "introInitial" : "Welcome"
+    }
 }

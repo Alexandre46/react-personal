@@ -4,7 +4,7 @@ import Logo from './components/Logo';
 import Switcher from './components/Switcher';
 import LanguageSwitcher from './components/LanguageSwitcher';
 import Navigation from './components/navigation';
-import * as serviceWorker from "./serviceWorker";
+import * as serviceWorker from "./components/serviceWorker";
 // Imports for Bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/scss/index.scss';

@@ -6,10 +6,12 @@
   "dependencies": {
     "@emotion/core": "^10.0.7",
     "@emotion/styled": "^10.0.7",
+    "bootstrap": "^4.4.1",
     "emailjs-com": "^2.4.1",
     "emotion-theming": "^10.0.7",
     "gh-pages": "^2.1.1",
     "i18next": "^19.3.2",
+    "i18next-browser-languagedetector": "^4.0.2",
     "i18next-xhr-backend": "^3.2.2",
     "import-all.macro": "^2.0.3",
     "mdx.macro": "^0.2.9",
@@ -22,7 +24,7 @@
     "react-dom": "^16.11.0",
     "react-i18next": "^11.3.3",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.4.0",
+    "react-scripts": "^3.2.0",
     "react-toast-notifications": "^2.4.0",
     "serve": "^11.2.0",
     "styled-components": "^4.4.1"
