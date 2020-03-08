@@ -6,7 +6,7 @@
 
         "introInitial" : "Salut, mon nom est ",
         "introEnd" : " et naviguez pour découvrir plus de moi",
-        "introMore" : "Je suis développeur de logiciels avec {num} ans de l'île de Madère, au Portugal",
+        "introMore" : "Je suis développeur de logiciels avec {{age}} ans de l'île de Madère, au Portugal",
         "introSentence" : "Knowledge is power. – Francis Bacon"
     }
 }

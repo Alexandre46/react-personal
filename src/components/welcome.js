@@ -15,12 +15,12 @@ const styles = {
         const { t } = this.props;
         return(
             <StyleRoot>
-                <div className="alert-alert-danger" style={styles.bounce}>
+                <div className="alert-alert-danger mt-5" style={styles.bounce}>
                     <h3>{t("introInitial")} <i>Alexandre Abreu</i> {t("introEnd")}
                         <span role="img" aria-label="coder">👨🏼‍💻💻 ‍</span> 
                     </h3>
-                    <div className="col-12 font-italic font-weight-lighter">
-                        {t("introMore")}
+                    <div className="col-12 font-italic font-weight-lighter mt-5">
+                        {t("introMore", { age: 29})}
                     <h5> {t('introSentence')}</h5>
                 </div>
                 </div>

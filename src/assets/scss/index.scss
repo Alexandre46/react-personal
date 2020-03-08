@@ -4,7 +4,6 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-
 :root {
     --primary-color: #fff !important;
     --secondary-color: #282c34 !important;
@@ -38,3 +37,18 @@
     background-image: var(--navbar-color) !important; 
 }
 .navbar-toggler { border-color: #008000; }
+
+body {
+    min-height: 100vh !important;
+    padding-bottom: 100px !important;
+    overflow-x: hidden !important;
+}
+
+footer {
+    position: absolute !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    /* Set the fixed height of the footer here */
+    height: 60px !important;
+    line-height: 60px !important; /* Vertically center the text there */
+  }
