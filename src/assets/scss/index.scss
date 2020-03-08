@@ -45,10 +45,16 @@ body {
 }
 
 footer {
-    position: absolute !important;
     bottom: 0 !important;
     width: 100% !important;
     /* Set the fixed height of the footer here */
     height: 60px !important;
     line-height: 60px !important; /* Vertically center the text there */
-  }
+}
+
+.requiredLabel:after {
+    font-weight: bold;
+    color: #e32 !important;
+    content: ' *' !important;
+    display:inline !important;
+}
