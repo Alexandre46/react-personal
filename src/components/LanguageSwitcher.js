@@ -66,7 +66,7 @@ CustomMenu = React.forwardRef(
     const { t } = this.props;
     return (
       <Dropdown>
-      <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components" variant="transparent" className="button-transparent border-0">
+      <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components" drop="left" variant="transparent" className="button-transparent border-0" >
         <img src="https://res.cloudinary.com/cinforme/image/upload/c_scale,w_30/v1583196206/BLOG/PngItem_311914.png" alt="lang selector"/>
       </Dropdown.Toggle>
   
