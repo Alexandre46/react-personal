@@ -1,6 +1,5 @@
 // Router imports
-import React from 'react';
-
+import React, { Component } from 'react';
 import {
     BrowserRouter as Router,
     Switch,
@@ -14,63 +13,67 @@ import MyProjects from './Projects';
 import BlogPosts from './Blog';
 import Contact from './contact';
 
-const urlPreffix = 'react-personal';
+import { withTranslation } from 'react-i18next';
+import { Navbar, Nav } from 'react-bootstrap';
 
-  export default function Navigation() {
-    return (
-      <Router>
-          <div class="nav-collapse collapsed">
-            <ul class="navbar">
-                <li class="col-12 col-lg-2 btn btn-outline-secondary nav-item nav-link">
-                    <Link to="/" className="nav-link">Home</Link>
-                </li>
-                <li class="col-12 col-lg-2 btn btn-outline-secondary nav-item nav-link">
-                    <Link to="/blog" className="nav-link"> Blog 🚀 </Link>
-                </li>
-                <li class="col-12 col-lg-2 btn btn-outline-secondary nav-item nav-link">
-                    <Link to="/projects" className="nav-link">Projects</Link>
-                </li>
-                <li class="col-12 col-lg-2 btn btn-outline-secondary nav-item nav-link">
-                    <Link to="/skills" className="nav-link">Skills</Link>
-                </li>
-                <li class="col-12 col-lg-2 btn btn-outline-secondary nav-item nav-link">
-                    <Link to="/about-me" className="nav-link">About me </Link>
-                </li>
-                <li class="col-12 col-lg-2 btn btn-outline-secondary nav-item nav-link">
-                    <Link to="/contact" className="nav-link">Contact </Link>
-                </li>
-            </ul>
+  class Navigation extends Component {
+    render(){
+      const { t } = this.props;
+      return (
+        <Router>
+          <Navbar collapseOnSelect expand="lg" variant="light">
+            <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+            <Navbar.Collapse id="basic-navbar-nav" className="row">
+              <Nav className="col-12">
+                  <li className="col-12 col-lg-2 btn btn-outline-secondary nav-item nav-link border-0">
+                      <Link to="/" className="nav-link menu-link">{t("menuHome")} <span role="img" aria-label="Home icon" >🏡</span></Link>
+                  </li>
+                  <li className="col-12 col-lg-2 btn btn-outline-secondary nav-item nav-link border-0">
+                      <Link to="/blog" className="nav-link menu-link"> {t("menuBlog")} <span role="img" aria-label="Rocket icon">🚀</span> </Link>
+                  </li>
+                  <li className="col-12 col-lg-3 btn btn-outline-secondary nav-item nav-link border-0">
+                      <Link to="/projects" className="nav-link menu-link">{t("menuProjects")} <span role="img" aria-label="Book icon">📓</span> </Link>
+                  </li>
+                  <li className="col-12 col-lg-3 btn btn-outline-secondary nav-item nav-link border-0">
+                      <Link to="/about-me" className="nav-link menu-link">{t("menuAboutMe")} <span role="img" aria-label="Person icon">👨🏼‍💻</span></Link>
+                  </li>
+                  <li className="col-12 col-lg-2 btn btn-outline-secondary nav-item nav-link border-0">
+                      <Link to="/contact" className="nav-link menu-link">{t("menuContact")} <span role="img" aria-label="Phone icon">📱</span></Link>
+                  </li>
+              </Nav>
+            </Navbar.Collapse> 
+          </Navbar>
           <Switch>
-            <Route exact path="/">
-                <Home />
-            </Route>
-            <Route path="/about">
-                <About />
-            </Route>
-            <Route path="/skills">
-                <Skills />
-            </Route>
-            <Route path="/blog">
-                <BlogPosts />
-            </Route>
-            <Route path="/projects">
-                <Projects />
-            </Route>
-            <Route path="/about-me">
-                <AboutMe />
-            </Route>
-            <Route path="/contact">
-                <Contact />
-            </Route>
-          </Switch>
-        </div>  
-      </Router>
-    );
+                <Route exact path="/">
+                    <Home />
+                </Route>
+                <Route path="/about">
+                    <About />
+                </Route>
+                <Route path="/skills">
+                    <Skills />
+                </Route>
+                <Route path="/blog">
+                    <Blog />
+                </Route>
+                <Route path="/projects">
+                    <Projects />
+                </Route>
+                <Route path="/about-me">
+                    <AboutMe />
+                </Route>
+                <Route path="/contact">
+                    <ContactMe />
+                </Route>
+              </Switch>
+        </Router>
+      );
+    }
   }
 
   function Home() {
     return (
-      <div class="mt-3">
+      <div className="col-12 mt-3">
         <Welcome/>
       </div>
     );
@@ -90,7 +93,9 @@ const urlPreffix = 'react-personal';
 
   function ContactMe() {
     return (
-      <Contact />
+      <div className="col-12 mt-3">
+        <Contact />
+      </div>
     );
   }
   
@@ -105,3 +110,5 @@ const urlPreffix = 'react-personal';
       <BlogPosts />
     );
   }
+
+  export default withTranslation()(Navigation);

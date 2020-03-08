@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import emailjs from 'emailjs-com';
-import { Form, FormLabel, FormText } from 'react-bootstrap'
-export default function ContactUs() {
+import { Form, FormLabel } from 'react-bootstrap';
+import { withTranslation } from 'react-i18next';
+
 
 function sendEmail(e) {
     e.preventDefault();
@@ -18,38 +19,42 @@ function sendEmail(e) {
           console.log(error);
       });
   }
-
-  return (
-      <div class="w-100">
-        <p class="p-3"> Feel free to contact me for any reason, don't forget to put your identification</p>
-        <Form className="contact-form" onSubmit={sendEmail}>
-
-        <div class="col-12 mt-4 form-group">
-        <div id="email-success" class="d-none bg-success alert-success"> Email sent with success</div>
-        <div id="email-error" class="d-none bg-danger alert-danger"> Email sent with success</div>
-
-            <input type="hidden" name="contact_number" class="pt-3" />
-            <FormLabel>Name</FormLabel>
-            <input class="form-control input" type="text" name="name" required/>
-        </div>
-
-        <div class="col-12 form-group">
-            <FormLabel>Email</FormLabel>
-            <input class="form-control input" type="email" name="email" required/>
-        </div>
-
-        <div class="col-12 form-group">
-            <FormLabel>Message</FormLabel>
-            <textarea class="form-control form-text" name="message" required/>
-        </div>
-
-        <div class="col-12 form-group">
-            <input class="btn btn-block btn-outline-success" type="submit" value="Send" />
-        </div>
-
+class ContactUs extends Component {
+    render() {
+        const { t } = this.props;
+        return (
+            <div className="col-12">
+              <div className="row">
+                <span className="col-12"> {t("contactLabel")}</span>
+                <Form className="col-12 contact-form" onSubmit={sendEmail}>
         
-        </Form>
-      </div>
-
-  );
+                    <div className="col-12 mt-4 form-group">
+                        <div id="email-success" className="d-none bg-success alert-success"> {t("contactWithSuccess")}</div>
+                        <div id="email-error" className="d-none bg-danger alert-danger"> {t("contactWithError")}</div>
+                        <input type="hidden" name="contact_number" className="pt-3" />
+                        <FormLabel>{t("contactName")}</FormLabel>
+                        <input className="form-control input" type="text" name="name" required/>
+                    </div>
+            
+                    <div className="col-12 form-group">
+                        <FormLabel>{t("contactEmail")}</FormLabel>
+                        <input className="form-control input" type="email" name="email" required/>
+                    </div>
+            
+                    <div className="col-12 form-group">
+                        <FormLabel>{t("contactMessage")}</FormLabel>
+                        <textarea className="form-control form-text" name="message" minLength="10" required/>
+                    </div>
+            
+                    <div className="col-12 form-group">
+                        <input className="btn btn-block btn-outline-success" type="submit" value={t("contactSend")} />
+                    </div>
+        
+                </Form>
+              </div>  
+            </div>
+        );
+    }
 }
+
+export default withTranslation()(ContactUs)
