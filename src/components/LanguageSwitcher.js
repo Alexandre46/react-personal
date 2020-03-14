@@ -14,7 +14,7 @@ class languageSwitcher extends Component {
     console.log("state value is", newlang);
     i18n.changeLanguage(newlang);
   };
-
+  
   // The forwardRef is important!!
 // Dropdown needs access to the DOM node in order to position the Menu
 CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
