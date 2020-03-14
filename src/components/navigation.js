@@ -24,8 +24,8 @@ import { Navbar, Nav, Button } from 'react-bootstrap';
       const NoMatchPage = () => {
         return (
           <div className="text-center pt-5">
-            <h1> 404 - Not found </h1>
-            <a className="btn btn-block btn-outline-danger" href="/"> {t("backHome")} </a>
+            <h1> 404 - {t("notFound")}</h1>
+            <a className="btn btn-lg btn-outline-danger" href="/"> {t("backHome")} </a>
           </div>
         );
       };
