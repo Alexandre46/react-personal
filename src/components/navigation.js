@@ -14,11 +14,21 @@ import BlogPosts from './Blog';
 import Contact from './contact';
 
 import { withTranslation } from 'react-i18next';
-import { Navbar, Nav } from 'react-bootstrap';
+import { Navbar, Nav, Button } from 'react-bootstrap';
+
+
 
   class Navigation extends Component {
     render(){
       const { t } = this.props;
+      const NoMatchPage = () => {
+        return (
+          <div className="text-center pt-5">
+            <h1> 404 - Not found </h1>
+            <a className="btn btn-block btn-outline-danger" href="/"> {t("backHome")} </a>
+          </div>
+        );
+      };
       return (
         <Router>
           <Navbar collapseOnSelect expand="lg" variant="light">
@@ -65,6 +75,7 @@ import { Navbar, Nav } from 'react-bootstrap';
                 <Route exact path="/contact">
                     <ContactMe />
                 </Route>
+                <Route component={NoMatchPage} />
               </Switch>
         </Router>
       );
