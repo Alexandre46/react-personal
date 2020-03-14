@@ -1,0 +1,28 @@
+{
+    "translations" : {
+        "en" : "English",
+        "fr" : "French",
+        "pt" : "Portuguese",
+
+        "introInitial" : "Hello, my name is ",
+        "introEnd" : " and navigate to discover more from me",
+        "introMore" : "I'm a software developer with {{age}} years-old from Madeira Island, Portugal",
+        "introSentence" : "Knowledge is power. – Francis Bacon",
+
+        "socialLabel" : "Find me on:", 
+        "contactLabel" : "Contact:",
+        "contactName" : "Name",
+        "contactEmail" : "Email",
+        "contactMessage" : "Message",
+        "contactSend" : "Send",
+
+        "menuHome" : "Home",
+        "menuBlog" : "Blog",
+        "menuProjects" : "Projects",
+        "menuAboutMe" : "About me",
+        "menuContact" : "Contact",
+
+        "aboutMeInfo" : "There's a lot of things i can talk but basically i am 29-year-old Portuguese coder who really enjoys this job.I've always be curious to discover new things on this field, start interaction with Computers since my 7-8 years old when my parents bought ourfirst personal computer. On college i've decided to go to technical course instead of normal /common area, and go to university to Computer Science degree. Finished my CS @2014 and since 2016 i'm working on software development, i'm currently on second company since university. I've been working on VOD (video-on-demand) projects , internet banking & news projects"
+
+    }
+}

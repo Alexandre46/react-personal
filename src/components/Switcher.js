@@ -36,15 +36,15 @@ export default class Switcher extends Component {
 
     render () {
         return (
-            <div class="float-right">
-                <label class="switch">
-            <input
-              type="checkbox"
-              defaultChecked={this.state.checked}
-              onChange={() => this.toggleThemeChange()}
-            />
-            <span class="slider round" />
-          </label>
+            <div className="float-left">
+              <label className="switch">
+                <input
+                  type="checkbox"
+                  defaultChecked={this.state.checked}
+                  onChange={() => this.toggleThemeChange()}
+                />
+                <span className="slider round" />
+              </label>
             </div>
         )
     }

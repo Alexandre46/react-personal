@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { bounce } from 'react-animations';
 import Radium, {StyleRoot} from 'radium';
+import { withTranslation } from 'react-i18next';
 
 const styles = {
     bounce: {
@@ -9,18 +10,28 @@ const styles = {
     }
   }
 
-  export default function Welcome() {
-        return (
+  class Welcome extends Component {
+    render() {
+        const { t } = this.props;
+        return(
             <StyleRoot>
-            <div class="alert-alert-danger" style={styles.bounce}>
-                <h3>Hi, My name is Alexandre Abreu and i'm a portuguese software developer 
-                    <span role="img" aria-label="coder">👨🏼‍💻💻 ‍</span> 
-                </h3>
-                <div class="col-12 font-italic font-weight-lighter">
-                I am passionate about programming, I love learning new things, discuss new ideas with the people around me, learn new thing every day and trying my best to contribute to a better world for everyone.
-                <h5> The first step is to establish that something is possible, then probably will occur.</h5>
-            </div>
-            </div>
-        </StyleRoot>
-        )
-  }
+                <div className="alert-alert-danger mt-5 text-center" style={styles.bounce}>
+                    <h3>{t("introInitial")} <i>Alexandre Abreu</i> {t("introEnd")}
+                        <span role="img" aria-label="coder">👨🏼‍💻💻 ‍</span> 
+                    </h3>
+                    <div className="col-12 font-italic font-weight-lighter mt-5">
+                        {t("introMore", { age: 29})}
+                        <br />
+                        <br />
+
+                        <h5> {t('introSentence')}</h5>
+                    </div>
+                </div>
+            </StyleRoot>
+        );
+    }
+        
+}
+  
+
+  export default withTranslation()(Welcome);
