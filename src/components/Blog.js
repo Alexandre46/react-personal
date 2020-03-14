@@ -13,7 +13,7 @@ class Blog extends Component {
   render() {
     return (
       <div>
-        <Suspense fallback={<div className="text-warning">>>> Loading...</div>}>
+        <Suspense fallback={<div className="text-warning">Loading...</div>}>
           
           <Accordion defaultActiveKey="0">
             <Card className={modeStyle}>

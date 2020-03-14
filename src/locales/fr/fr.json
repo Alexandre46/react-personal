@@ -14,7 +14,13 @@
         "contactName" : "Nom",
         "contactEmail" : "Courrier",
         "contactMessage" : "Message",
-        "contactSend" : "Envoyer"
+        "contactSend" : "Envoyer",
+
+        "menuHome" : "Accueil",
+        "menuBlog" : "Blog",
+        "menuProjects" : "Projets",
+        "menuAboutMe" : "À propos de moi",
+        "menuContact" : "Contact"
 
     }
 }
