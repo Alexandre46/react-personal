@@ -20,7 +20,9 @@
         "menuBlog" : "Blog",
         "menuProjects" : "Projetos",
         "menuAboutMe" : "Sobre mim",
-        "menuContact" : "Contacto"
+        "menuContact" : "Contacto",
 
+        "aboutMeInfo" : "Há muitas coisas que eu posso falar, mas basicamente eu sou um programador português de 29 anos que realmente gosta deste trabalho. Sempre estou curioso para descobrir coisas novas nesse campo, iniciar a interação com computadores desde os 7-8 anos de idade quando meus pais compraram nosso primeiro computador pessoal. Na faculdade, decidi fazer o curso técnico em vez da área normal / comum, e cursar a universidade no curso de Ciência da Computação. Terminei meu CS @ 2014 e desde 2016 estou trabalhando no desenvolvimento de software, atualmente estou na segunda empresa desde a universidade. Trabalho em projetos de VOD (vídeo sob demanda), internet banking e projetos de notícias"
+        
     }
 }

@@ -20,7 +20,9 @@
         "menuBlog" : "Blog",
         "menuProjects" : "Projets",
         "menuAboutMe" : "À propos de moi",
-        "menuContact" : "Contact"
+        "menuContact" : "Contact",
+
+        "aboutMeInfo" : "Il y a beaucoup de choses dont je peux parler mais, fondamentalement, je suis un codeur portugais de 29 ans qui aime vraiment ce travail.J'ai toujours été curieux de découvrir de nouvelles choses dans ce domaine, de commencer à interagir avec les ordinateurs depuis mes 7 à 8 ans. quand mes parents ont acheté notre premier ordinateur personnel. Au collège, j'ai décidé d'aller à un cours technique au lieu d'un domaine normal / commun, et d'aller à l'université pour obtenir un diplôme en informatique. Terminé mon CS @ 2014 et depuis 2016 je travaille sur le développement logiciel, je suis actuellement en deuxième entreprise depuis l'université. J'ai travaillé sur des projets VOD (vidéo à la demande), des services bancaires par Internet et des projets d'actualités"
 
     }
 }
