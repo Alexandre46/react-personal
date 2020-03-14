@@ -47,22 +47,22 @@ import { Navbar, Nav } from 'react-bootstrap';
                 <Route exact path="/">
                     <Home />
                 </Route>
-                <Route path="/about">
+                <Route exact path="/about">
                     <About />
                 </Route>
-                <Route path="/skills">
+                <Route exact path="/skills">
                     <Skills />
                 </Route>
-                <Route path="/blog">
+                <Route exact path="/blog">
                     <Blog />
                 </Route>
-                <Route path="/projects">
+                <Route exact path="/projects">
                     <Projects />
                 </Route>
-                <Route path="/about-me">
+                <Route exact path="/about-me">
                     <AboutMe />
                 </Route>
-                <Route path="/contact">
+                <Route exact path="/contact">
                     <ContactMe />
                 </Route>
               </Switch>
