@@ -4,6 +4,7 @@ import { Accordion, Card } from 'react-bootstrap';
 
 const PostOne = lazy(() => importMDX('../Blog/Post1.mdx'));
 const PostTwo = lazy(() => importMDX('../Blog/laravel-api-models.mdx'));
+const PostThree = lazy(() => importMDX('../Blog/coronavirus.mdx'));
 
 //Styling
 const themeMode = document.querySelector('html').getAttribute('data-theme');
@@ -32,6 +33,14 @@ class Blog extends Component {
               </Accordion.Toggle>
               <Accordion.Collapse eventKey="1">
                 <Card.Body><PostTwo /></Card.Body>
+              </Accordion.Collapse>
+            </Card>
+            <Card className={modeStyle}>
+              <Accordion.Toggle as={Card.Header} eventKey="2">
+                COVID-19
+              </Accordion.Toggle>
+              <Accordion.Collapse eventKey="2">
+                <Card.Body><PostThree /></Card.Body>
               </Accordion.Collapse>
             </Card>
           </Accordion>
