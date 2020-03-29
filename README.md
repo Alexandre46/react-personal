@@ -2,8 +2,15 @@
 Blog to develop react skills
 
 Stack:
-* **ReactJs**
-* Bootstrap
+* **React**
+* **Bootstrap 4**
+* **React-Router**
+* **React-i18n**
+* **MDX Macro (Blog posts in Markdown**
+
+### Deploy
+
+* Script deploy to gh pages
 
 
 ## URL
