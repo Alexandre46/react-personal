@@ -22,7 +22,7 @@ class Blog extends React.Component {
   }
 
 async componentDidMount() {
-   let response = await fetch("http://localhost:1337/posts");
+   let response = await fetch("https://react-app-api.herokuapp.com/posts");
    if (!response.ok) {
     return
   }
@@ -46,7 +46,7 @@ render() {
 
               return (
                 <button
-                  type="button"
+                  type="button btn-sm"
                   style={{ backgroundColor: 'gray', textAlign : 'left' }}
                   onClick={decoratedOnClick}
                 >
@@ -58,14 +58,11 @@ render() {
               <Accordion defaultActiveKey={0}>
                 <Card className={modeStyle}>
                   <CustomToggle as={Card.Header} eventKey={index}>
-                  <b> {post.title} </b>
+                  <b> {post.title} </b> - <i> {post.author.username} </i> - <Moment format="MMM Do YYYY">{post.published_at}</Moment>
                   </CustomToggle>
                   <Accordion.Collapse eventKey={index}>
                     <Card.Body>
                       <ReactMarkdown source={post.data} />
-                      <p className="pt-4">
-                        <Moment format="MMM Do YYYY">{post.published_at}</Moment>
-                      </p>
                     </Card.Body>
                   </Accordion.Collapse>
                 </Card>
