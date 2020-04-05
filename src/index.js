@@ -13,6 +13,12 @@ import './assets/scss/index.scss';
 import i18n from "./components/i18n";
 import { I18nextProvider } from 'react-i18next';
 
+// Immport React Google Anaylitics
+import ReactGA from 'react-ga';
+const trackingId = 'UA-159999549-1';
+ReactGA.initialize(trackingId);
+ReactGA.pageview(window.location.pathname + window.location.search);
+
 ReactDOM.render (
 <I18nextProvider i18n={i18n}>
 <Switcher />
