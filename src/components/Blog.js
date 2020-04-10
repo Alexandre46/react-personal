@@ -10,8 +10,6 @@ const strapi = new Strapi('http://localhost:1337');
 const themeMode = document.querySelector('html').getAttribute('data-theme');
 const modeStyle = (themeMode === 'light') ? '' : '';
 
-const preffixUrl = 'https://react-app-api.herokuapp.com';
-
 class Blog extends React.Component {
   constructor(props) {
     super(props);
@@ -67,7 +65,7 @@ render() {
                   <Accordion.Collapse eventKey={index}>
                     <Card.Body>
                       <Card.Title> 
-                        <img width="80px" className="rounded-circle" src={preffixUrl+post?.author?.avatar?.url} />
+                        <img width="80px" className="rounded-circle" src={post?.author?.avatar?.url} />
                          &nbsp; { post.author.username} &nbsp;&nbsp;&nbsp;&nbsp;
                          { post.categories.map((category) => {
                            return (<Badge variant="secondary"> { category.title } </Badge>);
@@ -75,7 +73,7 @@ render() {
                         })}&nbsp;&nbsp;
                       </Card.Title>
                       <Card.Text>
-                        <img className="img-fluid" src={preffixUrl+post?.media[0]?.url} />
+                        <img className="img-fluid" src={post?.media[0]?.url} />
                         <ReactMarkdown source={post.data} />
                       </Card.Text>
                     </Card.Body>
