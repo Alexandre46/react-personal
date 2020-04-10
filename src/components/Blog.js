@@ -68,10 +68,14 @@ render() {
                     <Card.Body>
                       <Card.Title> 
                         <img width="80px" className="rounded-circle" src={preffixUrl+post?.author?.avatar?.url} />
-                         &nbsp; { post.author.username}
+                         &nbsp; { post.author.username} &nbsp;&nbsp;&nbsp;&nbsp;
+                         { post.categories.map((category) => {
+                           return (<Badge variant="secondary"> { category.title } </Badge>);
+                           
+                        })}&nbsp;&nbsp;
                       </Card.Title>
                       <Card.Text>
-                        <img width="10rem" className="img-fluid" src={preffixUrl+post?.media[0]?.url} />
+                        <img className="img-fluid" src={preffixUrl+post?.media[0]?.url} />
                         <ReactMarkdown source={post.data} />
                       </Card.Text>
                     </Card.Body>
