@@ -7,14 +7,14 @@ Stack:
 * **Bootstrap 4**
 * **React-Router**
 * **React-i18n**
-* **React-Markdown (Blog posts in Markdown on CMS) **
+* **React-Markdown (Blog posts in Markdown on CMS)**
 
 ## Back
 * **Strapi Headless CMS**
 * ** MongoDB** *
 
 ## Other
-* ** Images hosted on amazing Cloudinary **
+* **Images hosted on amazing Cloudinary**
 Project Hosted on **heroku** (both (back/frontend)
 
 ### Deploy
