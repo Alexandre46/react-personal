@@ -1,4 +1,4 @@
-# Personal CV Website / Blog
+# Personal Website / Blog
 Blog to develop react skills
 
 Stack:
@@ -7,13 +7,15 @@ Stack:
 * **Bootstrap 4**
 * **React-Router**
 * **React-i18n**
-* **MDX Macro (Blog posts in Markdown**
+* **React-Markdown (Blog posts in Markdown on CMS) **
 
 ## Back
 * **Strapi Headless CMS**
 * ** MongoDB** *
 
-Hosted on **heroku**
+## Other
+* ** Images hosted on amazing Cloudinary **
+Project Hosted on **heroku** (both (back/frontend)
 
 ### Deploy
 
