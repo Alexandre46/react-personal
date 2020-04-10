@@ -11,14 +11,14 @@ Stack:
 
 ## Back
 * **Strapi Headless CMS**
-* ** MongoDB** *
+* **MongoDB** (MongoDB Compass as GUI)
 
 ## Other
 * **Images hosted on amazing Cloudinary**
-Project Hosted on **heroku** (both (back/frontend)
+* Project Hosted on **heroku** (both (back/frontend)
 
 ### Deploy
-
+* CMS will be auto deployed picking master branch after PR
 * Script deploy to gh pages
 
 
