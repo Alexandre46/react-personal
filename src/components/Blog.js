@@ -10,6 +10,7 @@ const strapi = new Strapi('http://localhost:1337');
 const themeMode = document.querySelector('html').getAttribute('data-theme');
 const modeStyle = (themeMode === 'light') ? '' : '';
 
+const preffixUrl = 'https://react-app-api.herokuapp.com';
 
 class Blog extends React.Component {
   constructor(props) {
@@ -36,7 +37,7 @@ render() {
   if (!this.state.loading) {
     return (
       <div className="postsList">
-        <h2 className="ProductList-title">Available Posts <Badge variant="secondary"> {this.state.posts.length} </Badge></h2>
+        <h2 className="ProductList-title pb-4"> Total Posts <Badge variant="secondary"> {this.state.posts.length} </Badge></h2>
         <div className="Posts-container">
           {this.state.posts.map((post, index) => {            
             function CustomToggle({ children, eventKey }) {
@@ -58,11 +59,21 @@ render() {
               <Accordion defaultActiveKey={0}>
                 <Card className={modeStyle}>
                   <CustomToggle as={Card.Header} eventKey={index}>
-                  <b> {post.title} </b> - <i> {post.author.username} </i> - <Moment format="MMM Do YYYY">{post.published_at}</Moment>
+                  <b> {post.title} </b> 
+                  - <Moment format="MMM Do YYYY">{post.published_at}</Moment>
+
+                  <Badge> </Badge>
                   </CustomToggle>
                   <Accordion.Collapse eventKey={index}>
                     <Card.Body>
-                      <ReactMarkdown source={post.data} />
+                      <Card.Title> 
+                        <img width="80px" className="rounded-circle" src={preffixUrl+post?.author?.avatar?.url} />
+                         &nbsp; { post.author.username}
+                      </Card.Title>
+                      <Card.Text>
+                        <img width="10rem" className="img-fluid" src={preffixUrl+post?.media[0]?.url} />
+                        <ReactMarkdown source={post.data} />
+                      </Card.Text>
                     </Card.Body>
                   </Accordion.Collapse>
                 </Card>
