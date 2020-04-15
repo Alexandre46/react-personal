@@ -68,7 +68,7 @@ render() {
                   <Accordion.Collapse eventKey={index}>
                     <Card.Body>
                       <Card.Title> 
-                        <img width="80px" className="rounded-circle" src={post?.author?.avatar?.url} />
+                        <img width="40px" height="50px" className="rounded-circle" src={post?.author?.avatar?.url} />
                          &nbsp; { post.author.username} &nbsp;&nbsp;&nbsp;&nbsp;
                          { post.categories.map((category) => {
                            return (<span className="inline-block px-1"><Badge variant={badgeColors[Math.floor(Math.random() * badgeColors.length)]}> { category.title } </Badge></span>);
