@@ -10,6 +10,9 @@ const strapi = new Strapi('http://localhost:1337');
 const themeMode = document.querySelector('html').getAttribute('data-theme');
 const modeStyle = (themeMode === 'light') ? '' : '';
 
+//categories badges
+const badgeColors = ['primary', 'secondary', 'success', 'danger', 'warning', 'light'];
+
 class Blog extends React.Component {
   constructor(props) {
     super(props);
@@ -68,7 +71,7 @@ render() {
                         <img width="80px" className="rounded-circle" src={post?.author?.avatar?.url} />
                          &nbsp; { post.author.username} &nbsp;&nbsp;&nbsp;&nbsp;
                          { post.categories.map((category) => {
-                           return (<Badge variant="secondary"> { category.title } </Badge>);
+                           return (<span className="inline-block px-1"><Badge variant={badgeColors[Math.floor(Math.random() * badgeColors.length)]}> { category.title } </Badge></span>);
                            
                         })}&nbsp;&nbsp;
                       </Card.Title>
