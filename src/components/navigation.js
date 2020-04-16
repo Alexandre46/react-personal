@@ -29,27 +29,11 @@ import { withTranslation } from 'react-i18next';
       return (
         <Router>
           <Switch>
-            <Route exact path="/">
-                <Home />
-            </Route>
-            <Route exact path="/about">
-                <About />
-            </Route>
-            <Route exact path="/skills">
-                <Skills />
-            </Route>
-            <Route exact path="/blog">
-                <Blog />
-            </Route>
-            <Route exact path="/projects">
-                <Projects />
-            </Route>
-            <Route exact path="/about-me">
-                <AboutMe />
-            </Route>
-            <Route exact path="/contact">
-                <ContactMe />
-            </Route>
+            <Route path="/" exact component={Home} />
+            <Route path="/blog" component={Blog} />
+            <Route path="/projects" component={Projects} />
+            <Route path="/about-me" component={About} />
+            <Route path="/contact" component={ContactMe} />
             <Route component={NoMatchPage} />
           </Switch>
         </Router>
