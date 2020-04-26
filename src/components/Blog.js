@@ -19,26 +19,46 @@ class Blog extends React.Component {
 
     this.state = {
       loading: true,
+      sort: "desc",
       posts: []
     }
   }
 
 async componentDidMount() {
-   let response = await fetch("https://react-app-api.herokuapp.com/posts");
+   let response = await fetch("https://react-app-api.herokuapp.com/posts?_sort=createdAt:"+this.state.sort); // search from more recent posts -> old
    if (!response.ok) {
     return
   }
 
   let posts = await response.json()
-  this.setState({ loading: false, posts: posts })
+  this.setState({ 
+    loading: false,
+    posts: posts,
+  })
 }
 
+setSorter=(event)=>{
+  let sortOrder = event.target.value;
+  this.setState({sort:sortOrder})
+  this.componentDidMount();
+}
 
 render() {
   if (!this.state.loading) {
     return (
       <div className="postsList">
-        <h2 className="ProductList-title pb-4"> Total Posts <Badge variant="secondary"> {this.state.posts.length} </Badge></h2>
+
+        <div className="row">
+          <div className="col-6">
+            <h2 className="ProductList-title pb-4"> Total Posts <Badge variant="secondary"> {this.state.posts.length} </Badge></h2>
+          </div>
+          <div className="col-6">
+            <span> Filter posts by date: </span>
+            <button className="btn btn-sm btn-danger" value="asc" onClick={(e) => this.setSorter(e)}> ▲ Oldest to Most recent </button>
+            <button className="btn btn-sm btn-light mx-3" value="desc" onClick={(e) => this.setSorter(e)}> ▼ Most recent to oldest </button>
+          </div>
+        </div>
+      
         <div className="Posts-container">
           {this.state.posts.map((post, index) => {            
             function CustomToggle({ children, eventKey }) {
