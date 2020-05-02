@@ -41,6 +41,11 @@ setSorter=(event)=>{
   let sortOrder = event.target.value;
   this.setState({sort:sortOrder})
   this.componentDidMount();
+  document.getElementById('sorter-asc').classList.remove('btn-success')
+  document.getElementById('sorter-desc').classList.remove('btn-success')
+  sortOrder === 'asc' 
+    ? document.getElementById('sorter-asc').classList.add('btn-success')
+    : document.getElementById('sorter-desc').classList.add('btn-success')
 }
 
 render() {
@@ -54,8 +59,8 @@ render() {
           </div>
           <div className="col-6">
             <span> Filter posts by date: </span>
-            <button className="btn btn-sm btn-danger" value="asc" onClick={(e) => this.setSorter(e)}> ▲ Oldest to Most recent </button>
-            <button className="btn btn-sm btn-light mx-3" value="desc" onClick={(e) => this.setSorter(e)}> ▼ Most recent to oldest </button>
+            <button className="btn btn-sm btn-outline-secondary sorter-buttons" id="sorter-asc" value="asc" onClick={(e) => this.setSorter(e)}> ▲ Oldest to Most recent </button>
+            <button className="btn btn-sm btn-outline-secondary sorter-buttons mx-3" id="sorter-desc" value="desc" onClick={(e) => this.setSorter(e)}> ▼ Most recent to oldest </button>
           </div>
         </div>
       
