@@ -2,8 +2,10 @@
 Blog to develop react skills
 
 Stack:
-* **ReactJs**
-* Bootstrap
+* **React**
+* React Router v5
+* React i18n
+* Bootstrap 4.0
 
 
 ## URL

@@ -6,28 +6,19 @@ class Header extends Component {
     render(){
       const { t } = this.props;
       return (
-            <Navbar collapseOnSelect expand="lg" variant="light">
-                <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-                <Navbar.Collapse id="basic-navbar-nav" className="row">
-                    <Nav className="col-12">
-                        <li className="col-12 col-lg-2 btn btn-outline-secondary nav-item nav-link border-0">
-                            <NavLink href="/" className="nav-link menu-link">{t("menuHome")} </NavLink>
-                        </li>
-                        <li className="col-12 col-lg-2 btn btn-outline-secondary nav-item nav-link border-0">
-                            <NavLink href="/blog" className="nav-link menu-link"> {t("menuBlog")} </NavLink>
-                        </li>
-                        <li className="col-12 col-lg-3 btn btn-outline-secondary nav-item nav-link border-0">
-                            <NavLink href="/projects" className="nav-link menu-link">{t("menuProjects")} </NavLink>
-                        </li>
-                        <li className="col-12 col-lg-3 btn btn-outline-secondary nav-item nav-link border-0">
-                            <NavLink href="/about-me" className="nav-link menu-link">{t("menuAboutMe")} </NavLink>
-                        </li>
-                        <li className="col-12 col-lg-2 btn btn-outline-secondary nav-item nav-link border-0">
-                            <NavLink href="/contact" className="nav-link menu-link">{t("menuContact")} </NavLink>
-                        </li>
-                    </Nav>
-                </Navbar.Collapse> 
-            </Navbar>
+        <Navbar collapseOnSelect expand="lg" variant="light" sticky="top">
+            <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+            <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="mr-auto text-center">
+                    <NavLink href={process.env.PUBLIC_URL + '/#'} className="nav-link menu-link">{t("menuHome")} </NavLink>
+                    <NavLink href={process.env.PUBLIC_URL + '/#/blog'} className="nav-link menu-link"> {t("menuBlog")} </NavLink>
+                    <NavLink href={process.env.PUBLIC_URL + '/#/projects'} className="nav-link menu-link">{t("menuProjects")} </NavLink>
+                    <NavLink href={process.env.PUBLIC_URL + '/#/resume'} className="nav-link menu-link">{t("menuResume")} </NavLink>
+                    <NavLink href={process.env.PUBLIC_URL + '/#/about-me'} className="nav-link menu-link">{t("menuAboutMe")} </NavLink>
+                    <NavLink href={process.env.PUBLIC_URL + '/#/contact'} className="nav-link menu-link">{t("menuContact")} </NavLink>
+                </Nav>
+            </Navbar.Collapse> 
+        </Navbar>
         );
     }
   }

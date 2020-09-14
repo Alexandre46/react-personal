@@ -20,11 +20,27 @@
         "menuBlog" : "Blog",
         "menuProjects" : "Projects",
         "menuAboutMe" : "About me",
+        "menuResume": "Resume",
         "menuContact" : "Contact",
 
         "aboutMeInfo" : "There's a lot of things i can talk but basically i am 29-year-old Portuguese coder who really enjoys this job.I've always be curious to discover new things on this field, start interaction with Computers since my 7-8 years old when my parents bought ourfirst personal computer. On college i've decided to go to technical course instead of normal /common area, and go to university to Computer Science degree. Finished my CS @2014 and since 2016 i'm working on software development, i'm currently on second company since university. I've been working on VOD (video-on-demand) projects , internet banking & news projects",
 
         "notFound" : "Not Found",
-        "backHome" : "Back Home"
+        "backHome" : "Back Home",
+
+        "resume-first-title" : "Nearsoft Solutions - Fullstack developer",
+        "resume-first-subtitle" : "Funchal, Madeira / Portugal",
+        "resume-first-text" : "Started at this company as consultant for Irish beverage company OrbisMES, using MSQL , reviewing T-SQL/ stored procedures and analysis all beer flow for company. Currently working with Laravel stack using MySQL, RESTFul APIs rendering front ends with vanilla js using SCSS with Bootstrap framework. We use daily docker for pack all projects with git version control system and use AWS services like ECR to store all docker images, serve assets with S3 and store data with RDS mainly MySQL. Working with CI/CD pipelines connected to our gitlab account & some strict rules(*) about Unit testing / code linters. Autonomous developer managing small projects doing Agile methodoly across all projects worked.",
+        "resume-first-note" : "By strict rules means any merge request can ONLY be aproved if passes some % of test coverage on Unit tests",
+        "resume-first-tech-summary": [ "PHP",  "JavaScript", "CSS", "Bootstrap", "SCSS", "HTML", "Docker", "Git", "AWS", "CLI"],
+
+        "resume-second-title" : "TV App Agency - Backend Developer",
+        "resume-second-subtitle" : "Funchal, Madeira / Portugal",
+        "resume-second-text" : "Development of apis to serve content for VOD applications such as blockbuster / systems similar to netflix, creation of administration backoffices to control the content (taking advantage of Bootstrap to speed up the visualization of the panels). Configure some cronjobs to automatically ingest content on the backend to be introduced in the MySQL databases, with Laravel Schedule and use of the Eloquent ORM of Laravel to manipulate data from the database and transform them into API responses, using Postman to be able test these services.",
+        "resume-second-tech-summary": [ "RESTful", "PHP", "jQuery", "CSS", "HTML", "SVN", "Laravel Scheduler /cronjobs"],
+
+        "resume-third-title" : "Freelancer",
+        "resume-third-subtitle" : "Funchal, Madeira / Portugal",
+        "resume-third-text" : "It was proposed to develop an advertising platform based on wordpress, in which it would be necessary to create some PHP functions for some actions on the platform, and following the guidelines of the designer who designed some mockups for the platform. A subscription system was also created for it, which would give more prominence to the ads sent by paying users of the platform. With this experience I gained autonomy to be able to estimate / carry out work outside the school / university environment and to be able to have a more real approach to the difficulties of the area, dealing with the problems that a system deals with when interacting with the end user."
     }
 }

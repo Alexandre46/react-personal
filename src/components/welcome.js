@@ -17,6 +17,7 @@ const styles = {
             <StyleRoot>
                 <div className="alert-alert-danger mt-5 text-center" style={styles.bounce}>
                     <h3>{t("introInitial")} <i>Alexandre Abreu</i> {t("introEnd")}
+                    <br/>
                         <span role="img" aria-label="coder">👨🏼‍💻💻 ‍</span> 
                     </h3>
                     <div className="col-12 font-italic font-weight-lighter mt-5">
