@@ -13,6 +13,8 @@ const styles = {
   class Welcome extends Component {
     render() {
         const { t } = this.props;
+        const year = new Date().getFullYear();
+        
         return(
             <StyleRoot>
                 <div className="alert-alert-danger mt-5 text-center" style={styles.bounce}>
@@ -21,7 +23,7 @@ const styles = {
                         <span role="img" aria-label="coder">👨🏼‍💻💻 ‍</span> 
                     </h3>
                     <div className="col-12 font-italic font-weight-lighter mt-5">
-                        {t("introMore", { age: 29})}
+                        {t("introMore", { age: year - 1990 })}
                         <br />
                         <br />
 

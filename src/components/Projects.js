@@ -16,7 +16,7 @@ export default class MyProjects extends Component {
             <Button className="btn-secondary btn-block">
               <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1">Vue Weather SPA</h5>
-                <small class="text-muted">VueJS / DarkSky API / Axios</small>
+                <small>VueJS / DarkSky API / Axios</small>
               </div>
               <p class="mb-1">Vue Weather Single Page Application to show city background image , weekly forecast for geolocation of user</p>
               <small class="text-muted"><a class="btn-secondary" href="https://github.com/Alexandre46/vue-node-weather">🔗 https://github.com/Alexandre46/vue-node-weather</a></small>
@@ -24,9 +24,17 @@ export default class MyProjects extends Component {
             <Button className="btn-block">
               <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1">React personal site</h5>
-                <small class="text-muted">React / React-router / React-boostrap & animations (css)</small>
+                <small>React / React-router / React-boostrap & animations (css)</small>
               </div>
               <p class="mb-1">Personal site/blog just to develop react knowledge</p>
+              <small class="text-muted"><a class="btn-secondary" href="https://github.com/Alexandre46/react-personal">🔗 https://github.com/Alexandre46/react-personal</a></small>
+            </Button>
+            <Button className="btn-warning btn-block">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">React Native HCCP</h5>
+                <small>React Native / React Navigation / React Bootstrap /</small>
+              </div>
+              <p class="mb-1">Mobile application to know a bit of Android / iOS apps building a simple app to pick photos / manage on CMS backend and navigate through some screens to see multiple media assets</p>
               <small class="text-muted"><a class="btn-secondary" href="https://github.com/Alexandre46/react-personal">🔗 https://github.com/Alexandre46/react-personal</a></small>
             </Button>
            </div>

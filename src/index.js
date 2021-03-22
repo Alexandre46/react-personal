@@ -7,7 +7,9 @@ import Navigation from './components/navigation';
 import Header from './components/header';
 import * as serviceWorker from "./components/serviceWorker";
 // Imports for Bootstrap
+import 'bootstrap/dist/js/bootstrap.min.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "jquery/dist/jquery.min.js";
 import './assets/scss/index.scss';
 // imports for i18n
 import i18n from "./components/i18n";

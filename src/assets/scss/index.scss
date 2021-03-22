@@ -24,6 +24,18 @@
 #mainApp {
     background-color: var(--secondary-color);
     color: var(--primary-color);
+    overflow-x: hidden !important;
+}
+
+.main {
+  position: relative;
+  min-height: calc(100vh - 10rem);
+}
+
+.footer {
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 
 .card {
@@ -32,6 +44,10 @@
 
 .menu-link {
     color: var(--primary-color) !important;
+}
+
+.nav-link {
+  padding: .5rem .7rem !important;
 }
 
 .navbar-toggler-icon {
@@ -47,17 +63,6 @@ body {
     padding: 35px 0;
     overflow-x: hidden !important;
     background: #262730 url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/noise-bg.png) repeat 0 0;
-}
-
-footer {
-    bottom: 0 !important;
-    width: 100% !important;
-    /* Set the fixed height of the footer here */
-    @media (min-width: 1199.98px){
-      height: calc(100% - 80vh);
-    }
-    height: calc(100% - 60px);
-    line-height: 60px !important; /* Vertically center the text there */
 }
 
 .requiredLabel:after {
@@ -117,7 +122,6 @@ footer {
       position: relative;
       display: block;
       font-family: 'icomoon';
-      speak: none;
       font-style: normal;
       font-weight: normal;
       font-variant: normal;

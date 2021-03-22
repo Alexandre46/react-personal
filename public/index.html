@@ -16,14 +16,20 @@
   </head>
   <body id="mainApp" class="h-100">
     <div class="container h-100">
-      <div class="h-100 row">
+      <div class="h-100 row main">
         <div class="col-3 col-md-2" id="logo"></div>
         <div class="col-3 col-md-2" id="language-switcher"></div>
         <div class="col-3 col-md-2" id="theme-switcher"></div>
-        <div id="header"></div>
+        <div class="col-3 d-block d-md-none">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header" 
+            aria-controls="header" aria-expanded="true" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="col-12 col-md-6 collapse navbar-collapse show" id="header"></div>
         <div class="col-12" id="content"></div>
       </div>
-      <footer class="text-center">
+      <footer class="text-center footer">
         <ul class="social-networks square spin-icon">
           <li><a target="_blank" href="https://www.facebook.com/Alexandreabreu46" class="text-decoration-none text-center icon-facebook"> Facebook </a></li>
           <li><a target="_blank" href="https://www.linkedin.com/in/alexandreabreu46/" class="text-decoration-none text-center icon-linkedin"> Linkedin </a></li>
