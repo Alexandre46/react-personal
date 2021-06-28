@@ -2,6 +2,7 @@
 Blog to develop react skills
 
 Stack:
+
 ## Front
 * **React**
 * **Bootstrap 4**

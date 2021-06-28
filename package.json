@@ -10,6 +10,7 @@
     "emailjs-com": "^2.4.1",
     "emotion-theming": "^10.0.7",
     "gh-pages": "^2.1.1",
+    "history": "^4.10.1",
     "i18next": "^19.3.2",
     "i18next-browser-languagedetector": "^4.0.2",
     "i18next-xhr-backend": "^3.2.2",
@@ -18,18 +19,24 @@
     "moment": "^2.24.0",
     "node-sass": "^4.13.1",
     "pm2": "^4.1.2",
+    "popper": "^1.0.1",
+    "popper.js": "^1.14.3",
     "radium": "^0.26.0",
     "react": "^16.11.0",
     "react-animations": "^1.0.0",
     "react-bootstrap": "^1.0.0-beta.14",
     "react-dom": "^16.11.0",
+    "react-fade-in": "^1.1.0",
     "react-ga": "^2.7.0",
     "react-i18next": "^11.3.3",
+    "react-loading": "^2.0.3",
+    "react-lottie": "^1.2.3",
     "react-markdown": "^4.3.1",
     "react-moment": "^0.9.7",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.2.0",
     "react-toast-notifications": "^2.4.0",
+    "react-vertical-timeline-component": "^3.0.2",
     "serve": "^11.2.0",
     "strapi-sdk-javascript": "^0.3.3",
     "styled-components": "^4.4.1"
@@ -57,7 +64,7 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://alexandreabreu46.site/",
+  "homepage": "https://alexandreabreu46.site",
   "devDependencies": {
     "postcss-loader": "^3.0.0"
   }

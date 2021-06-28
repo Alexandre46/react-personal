@@ -12,24 +12,32 @@
     <link rel="apple-touch-icon" href="logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
   
-    <title>Alexandre Abreu - 2019</title>
+    <title>Alexandre Abreu - Software Developer</title>
   </head>
-  <body class="container" id="mainApp">
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-      <div class="row">
-          <div class="col-5 col-md-2 d-inline-block align-items-center my-auto" id="logo"></div>
-          <div class="col-4 col-md-2 d-inline-block align-items-center my-auto" id="language-switcher"></div>
-          <div class="col-3 col-md-2 d-inline-block align-items-center my-auto" id="theme-switcher"></div>
-          <div class="col-12 col-md-6 d-inline-block align-items-center my-auto" id="header"></div>
-          <div class="col-12" id="content"></div>
+  <body id="mainApp" class="h-100">
+    <div class="container h-100">
+      <div class="h-100 row main">
+        <div class="col-3 col-md-2" id="logo"></div>
+        <div class="col-3 col-md-2" id="language-switcher"></div>
+        <div class="col-3 col-md-2" id="theme-switcher"></div>
+        <div class="col-3 d-block d-md-none">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header" 
+            aria-controls="header" aria-expanded="true" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="col-12 col-md-6 collapse navbar-collapse show" id="header"></div>
+        <div class="col-12" id="content"></div>
       </div>
+      <footer class="text-center footer">
+        <ul class="social-networks square spin-icon">
+          <li><a target="_blank" href="https://www.facebook.com/Alexandreabreu46" class="text-decoration-none text-center icon-facebook"> Facebook </a></li>
+          <li><a target="_blank" href="https://www.linkedin.com/in/alexandreabreu46/" class="text-decoration-none text-center icon-linkedin"> Linkedin </a></li>
+          <li><a target="_blank" href="https://github.com/Alexandre46" class="text-decoration-none text-center icon-github"> Github </a></li>
+        </ul>
+        <span>Made with ❤️ using React </span> <b>© 2020 Alexandre Abreu </b>
+      </footer>
+    </div>
   </body>
-  <footer class="text-center">
-    <ul class="social-networks square spin-icon">
-      <li><a target="_blank" href="https://www.facebook.com/Alexandreabreu46" class="text-decoration-none text-center icon-facebook"> Facebook </a></li>
-      <li><a target="_blank" href="https://www.linkedin.com/in/alexandreabreu46/" class="text-decoration-none text-center icon-linkedin"> Linkedin </a></li>
-      <li><a target="_blank" href="https://github.com/Alexandre46" class="text-decoration-none text-center icon-github"> Github </a></li>
-    </ul>
-    <span>Made with ❤️ using React </span> <b>© 2020 Alexandre Abreu </b>
-  </footer>
+  
 </html>

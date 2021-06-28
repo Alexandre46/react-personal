@@ -1,46 +1,38 @@
 // Router imports
 import React, { Component } from 'react';
 import {
-    BrowserRouter as Router,
-    Switch,
-    Link,
+  HashRouter,
     Route
 } from 'react-router-dom';
-import MyCarousel from './carousel';
 import AboutMe from './AboutMe';
 import Welcome from './welcome';
 import MyProjects from './Projects';
 import BlogPosts from './Blog';
 import Contact from './contact';
-
+import Resume from './Resume';
 import { withTranslation } from 'react-i18next';
+
+import { createBrowserHistory } from "history";
+
+const history = createBrowserHistory({
+  basename: process.env.PUBLIC_URL,
+});
 
   class Navigation extends Component {
     render(){
-      const { t } = this.props;
-      const NoMatchPage = () => {
-        return (
-          <div className="text-center pt-5">
-            <h1> 404 - {t("notFound")}</h1>
-            <a className="btn btn-lg btn-outline-danger" href="/"> {t("backHome")} </a>
-          </div>
-        );
-      };
+      
       return (
-        <Router>
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/blog" component={Blog} />
-            <Route path="/projects" component={Projects} />
-            <Route path="/about-me" component={About} />
-            <Route path="/contact" component={ContactMe} />
-            <Route component={NoMatchPage} />
-          </Switch>
-        </Router>
+        <HashRouter history={history} basename={process.env.PUBLIC_URL}>
+              <Route exact path={process.env.PUBLIC_URL + '/'} component={Home} />
+              <Route path={process.env.PUBLIC_URL + '/blog'} component={Blog} /> 
+              <Route path={process.env.PUBLIC_URL + '/projects'} component={Projects} />
+              <Route path={process.env.PUBLIC_URL + '/resume'} component={Resume} />
+              <Route path={process.env.PUBLIC_URL + '/about-me'} component={About} />
+              <Route path={process.env.PUBLIC_URL + '/contact'} component={ContactMe} />
+        </HashRouter>
       );
     }
   }
-
   function Home() {
     return (
       <div className="col-12 mt-3">
@@ -49,12 +41,6 @@ import { withTranslation } from 'react-i18next';
     );
   }
 
-  function Skills() {
-    return (
-      <MyCarousel />
-    );
-  }
-  
   function About() {
     return (
       <AboutMe />

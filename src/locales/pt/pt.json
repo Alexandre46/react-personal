@@ -19,11 +19,27 @@
         "menuHome" : "Início",
         "menuBlog" : "Blog",
         "menuProjects" : "Projetos",
+        "menuResume": "Resumo",
         "menuAboutMe" : "Sobre mim",
         "menuContact" : "Contacto",
 
-        "aboutMeInfo" : "Há muitas coisas que eu posso falar, mas basicamente eu sou um programador português de 29 anos que realmente gosta deste trabalho. Sempre estou curioso para descobrir coisas novas nesse campo, iniciar a interação com computadores desde os 7-8 anos de idade quando meus pais compraram nosso primeiro computador pessoal. Na faculdade, decidi fazer o curso técnico em vez da área normal / comum, e cursar a universidade no curso de Ciência da Computação. Terminei meu CS @ 2014 e desde 2016 estou trabalhando no desenvolvimento de software, atualmente estou na segunda empresa desde a universidade. Trabalho em projetos de VOD (vídeo sob demanda), internet banking e projetos de notícias",
+        "aboutMeInfo" : "Há muitas coisas que eu posso falar, mas basicamente eu sou um programador português mais detalhadamente da fantástica ilha da Madeira, nasci em 1990 e sou apaixonado por programação. Por vezes chego a casa e passo algum tempo a tentar criar novos projectos pessoais para experimentar novas tecnologias, ferramentas ou linguagens. Comecei este interesse em informática desde os 7-8 anos de idade quando meus pais compraram nosso primeiro computador pessoal. No ensino secundário, decidi fazer o curso técnico informática em vez de uma área geral, e quando fui para a universidade escolhi Engenharia Informática. Terminei minha Licenciatura em Engº Informática em 2014 e desde 2016 estou trabalhando no desenvolvimento de software, atualmente estou na segunda empresa desde a universidade. Já trabalhei em diversas áreas tais como plataformas de conteúdos multimédia (filmes, series), produção de bebidas (MES), banca e plataformas de conteúdos, tal me deu alguma experiencia em backend e tambem frontend",
         "notFound" : "Não encontrado",
-        "backHome" : "Voltar ao início"
+        "backHome" : "Voltar ao início",
+
+        "resume-first-title" : "Nearsoft Solutions - Fullstack developer",
+        "resume-first-subtitle" : "Funchal, Madeira / Portugal",
+        "resume-first-text" : "Iniciei nesta empresa como consultor para a empresa irlandesa de bebidas OrbisMES, utilizando MSQL, revendo T-SQL / stored procedures e analisando todo o fluxo de cerveja da empresa. Atualmente estou a trabalhar com a stack (Laravel / MySQL/ APIs RESTFul / JavaScript / Bootstrap). Usamos Docker containers diáriamente para correr todos os projetos com sistema de controle de versão GIT e usar serviços AWS como ECR para armazenar todas as imagens docker, servir ativos com S3 e armazenar dados com RDS, principalmente MySQL. Trabalho com pipelines de CI/CD conectados à nossa conta gitlab e algumas regras rígidas (*) sobre teste de unidade / linters de código. Desenvolvedor autônomo gerenciando pequenos projetos fazendo metodologia Agile em todos os projetos trabalhados.",
+        "resume-first-note" : "Por regras estritas, qualquer solicitação de mesclagem SÓ pode ser aprovada se passar em alguns% da cobertura de teste em testes de unidade",
+        "resume-first-tech-summary": [ "PHP",  "JavaScript", "CSS", "Bootstrap", "SCSS", "HTML", "Docker", "Git", "AWS", "CLI"],
+
+        "resume-second-title" : "TV App Agency - Backend Developer",
+        "resume-second-subtitle" : "Funchal, Madeira / Portugal",
+        "resume-second-text" : "Desenvolvimento de apis para servir conteúdo para aplicações VOD como blockbuster / sistemas similares ao netflix, criação de backoffices de administração para controle de conteúdo (aproveitando Bootstrap para agilizar a visualização dos painéis). Configure alguns cronjobs para ingerir conteúdo automaticamente no backend a ser introduzido nos bancos de dados MySQL, com Laravel Schedule e uso do Eloquent ORM do Laravel para manipular dados do banco de dados e transformá-los em respostas API, usando Postman para poder testar esses serviços .",
+        "resume-second-tech-summary": [ "RESTful", "PHP", "jQuery", "CSS", "HTML", "SVN", "Laravel Scheduler /cronjobs"],
+
+        "resume-third-title" : "Studend/Freelancer",
+        "resume-third-subtitle" : "Funchal, Madeira / Portugal",
+        "resume-third-text" : "Enquanto estava na universidade, um amigo me propôs desenvolver uma plataforma de publicidade baseada em wordpress, na qual seria necessário criar algumas funções PHP para algumas ações na plataforma, e seguindo as orientações do designer que desenhou alguns mockups para o plataforma. Para isso também foi criado um sistema de assinatura, que daria mais destaque aos anúncios enviados pelos usuários pagantes da plataforma. Com esta experiência ganhei autonomia para poder estimar / realizar trabalhos fora do ambiente escolar / universitário e poder ter uma abordagem mais real das dificuldades da área, lidando com os problemas que um sistema lida ao interagir com o usuário final."
     }
 }
