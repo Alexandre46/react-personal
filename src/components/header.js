@@ -11,6 +11,7 @@ class Header extends Component {
             <NavLink href={process.env.PUBLIC_URL + '/#/blog'} className="nav-link menu-link"> {t("menuBlog")} </NavLink>
             <NavLink href={process.env.PUBLIC_URL + '/#/projects'} className="nav-link menu-link">{t("menuProjects")} </NavLink>
             <NavLink href={process.env.PUBLIC_URL + '/#/resume'} className="nav-link menu-link">{t("menuResume")} </NavLink>
+            <NavLink href={process.env.PUBLIC_URL + '/#/cv'} className="nav-link menu-link">{t("menuCV")} </NavLink>
             <NavLink href={process.env.PUBLIC_URL + '/#/about-me'} className="nav-link menu-link">{t("menuAboutMe")} </NavLink>
             <NavLink href={process.env.PUBLIC_URL + '/#/contact'} className="nav-link menu-link">{t("menuContact")} </NavLink>
         </div>

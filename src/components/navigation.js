@@ -10,6 +10,7 @@ import MyProjects from './Projects';
 import BlogPosts from './Blog';
 import Contact from './contact';
 import Resume from './Resume';
+import CurriculumVitae from './CurriculumVitae';
 import { withTranslation } from 'react-i18next';
 
 import { createBrowserHistory } from "history";
@@ -27,6 +28,7 @@ const history = createBrowserHistory({
               <Route path={process.env.PUBLIC_URL + '/blog'} component={Blog} /> 
               <Route path={process.env.PUBLIC_URL + '/projects'} component={Projects} />
               <Route path={process.env.PUBLIC_URL + '/resume'} component={Resume} />
+              <Route path={process.env.PUBLIC_URL + '/cv'} component={CurriculumVitae} />
               <Route path={process.env.PUBLIC_URL + '/about-me'} component={About} />
               <Route path={process.env.PUBLIC_URL + '/contact'} component={ContactMe} />
         </HashRouter>
