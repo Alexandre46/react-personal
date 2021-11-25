@@ -59,23 +59,23 @@ class CurriculumVitae extends React.Component {
         
         <div className="d-flex justify-content-center py-4 my-4">
           <div className="container">
-            <div className="row text-center">
-              <div className="col-12">
+            <div className="row">
+              <div className="col-12 text-center">
                 <h5>{t("cv-select-option")}</h5>
               </div>
-              <div className="col-12 col-sm-6">
+              <div className="col-12 col-sm-6 text-right">
                 <button 
                     type="button" 
-                    className="btn btn-primary" 
+                    className={this.state.cvSelected === selectors.resume ? "btn btn-primary active btn-outline-primary" : "btn btn-primary"}
                     onClick={ () => this.changeCvSelected(selectors.resume)}
                 >
                   {t("cv-resume")}
                 </button>
               </div>
-              <div className="col-12 col-sm-6">
+              <div className="col-12 col-sm-6 text-left">
                 <button 
                     type="button" 
-                    className="btn btn-outline-primary"
+                    className={this.state.cvSelected === selectors.complete ? "btn btn-secondary active btn-outline-secondary" : "btn btn-secondary"}
                     onClick={ () => this.changeCvSelected(selectors.complete)}
                 >
                   {t("cv-complete")}
@@ -83,7 +83,7 @@ class CurriculumVitae extends React.Component {
               </div>
             </div>
 
-            <div className={this.state.cvSelected ? "row mt-3" : "row mt-3 d-none"}>
+            <div className={this.state.cvSelected ? "row pt-3 px-5 mx-5" : "row pt-3 px-5 mx-5 d-none"}>
                 <div className="col-12 offset-2">
                     <Document
                         file={this.state.cvFile}
