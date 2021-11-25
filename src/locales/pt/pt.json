@@ -41,6 +41,15 @@
 
         "resume-third-title" : "Studend/Freelancer",
         "resume-third-subtitle" : "Funchal, Madeira / Portugal",
-        "resume-third-text" : "Enquanto estava na universidade, um amigo me propôs desenvolver uma plataforma de publicidade baseada em wordpress, na qual seria necessário criar algumas funções PHP para algumas ações na plataforma, e seguindo as orientações do designer que desenhou alguns mockups para o plataforma. Para isso também foi criado um sistema de assinatura, que daria mais destaque aos anúncios enviados pelos usuários pagantes da plataforma. Com esta experiência ganhei autonomia para poder estimar / realizar trabalhos fora do ambiente escolar / universitário e poder ter uma abordagem mais real das dificuldades da área, lidando com os problemas que um sistema lida ao interagir com o usuário final."
+        "resume-third-text" : "Enquanto estava na universidade, um amigo me propôs desenvolver uma plataforma de publicidade baseada em wordpress, na qual seria necessário criar algumas funções PHP para algumas ações na plataforma, e seguindo as orientações do designer que desenhou alguns mockups para o plataforma. Para isso também foi criado um sistema de assinatura, que daria mais destaque aos anúncios enviados pelos usuários pagantes da plataforma. Com esta experiência ganhei autonomia para poder estimar / realizar trabalhos fora do ambiente escolar / universitário e poder ter uma abordagem mais real das dificuldades da área, lidando com os problemas que um sistema lida ao interagir com o usuário final.",
+        
+        "cv-page": "Página",
+        "cv-of": "de",
+        "cv-previous": "Anterior",
+        "cv-next": "Próxima",
+        "cv-download-cv": "Descarregar CV",
+        "cv-select-option": "Selecione uma opção",
+        "cv-resume": "Resumo",
+        "cv-complete": "CV completo"
     }
 }

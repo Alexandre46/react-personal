@@ -1,71 +1,141 @@
-import { Link } from '@react-pdf/renderer';
-import React, { useState, Component } from 'react';
-import { Document, Page } from 'react-pdf';
-import CV from '../cv.pdf';
+import React, { Component } from "react";
+import { withTranslation } from "react-i18next";
+import { Document, Page } from "react-pdf";
+import CV from "../cv.pdf";
+import CVRedesign from "../cv-redesign.pdf";
 
-export default function CurriculumVitae() {
-    const [numPages, setNumPages] = useState(null);
-    const [pageNumber, setPageNumber] = useState(1); //setting 1 to show fisrt page
-
-    function onDocumentLoadSuccess({ numPages }) {
-        setNumPages(numPages);
-        setPageNumber(1);
-    }
-
-    function changePage(offset) {
-        setPageNumber(prevPageNumber => prevPageNumber + offset);
-    }
-
-    function previousPage() {
-        changePage(-1);
-    }
-
-    function nextPage() {
-        changePage(1);
-    }
-
-  return (
-      
-    <div className="d-flex justify-content-center py-4 my-4">
-        <div className="row">
-        <div className="col-12 offset-2">
-                    <Document
-                    file={CV}
-                    options={{ workerSrc: "/pdf.worker.js" }}
-                    onLoadSuccess={onDocumentLoadSuccess}
-                >
-                    <Page pageNumber={pageNumber} />
-                </Document>
-                </div>
-            <div className="col-12 offset-2">
-                <div className="col-6 pt-2 mx-auto">
-                    <p>
-                    Page {pageNumber || (numPages ? 1 : "--")} of {numPages || "--"}
-                    </p>
-                    <button type="button" disabled={pageNumber <= 1} onClick={previousPage}>
-                    Previous
-                    </button>
-                    <button
-                    type="button"
-                    disabled={pageNumber >= numPages}
-                    onClick={nextPage}
-                    >
-                    Next
-                    </button>
-                </div>  
-                
-                <div className="col-6 pt-2 mx-auto">
-                    <a href={CV} target="_blank" rel="noopener noreferrer" download>
-                        <button className="btn btn-info">
-                            <i className="fas fa-download"/>
-                            Download File
-                        </button>
-                    </a>
-                </div>
-                
-
-            </div>
-      </div>
-    </div>
-  );
+const selectors = {
+    resume: "resume",
+    complete: "complete"
 }
+
+class CurriculumVitae extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            numPages: null,
+            pageNumber: 1,
+            cvSelected: null,
+            cvFile: null
+        }
+    }
+
+    onDocumentLoadSuccess = ({ numPages }) => {
+        this.setState({numPages: numPages});
+        this.setState({pageNumber: 1});
+    }
+
+    changePage = (offset) => this.setState({pageNumber: ((prevPageNumber) => prevPageNumber + offset)});
+
+    previousPage = () => this.changePage(-1);
+  
+    nextPage = () => this.changePage(1);
+
+    showSpecificFile = () => {
+        
+          switch(this.state.cvSelected) {
+              case selectors.resume:
+                this.setState({cvFile: CVRedesign})
+                break;
+              case selectors.complete:
+                this.setState({cvFile: CV})
+                break;
+              default:
+                this.setState({cvFile: CV})
+                break;
+          }
+        
+    }
+
+    changeCvSelected = (string) => {
+        console.log('change CV to: '+ string)
+        this.setState({cvSelected: string});
+        this.showSpecificFile();
+    }
+    
+    
+
+
+  render () {
+    const { t } = this.props;
+    
+    return (
+        
+        <div className="d-flex justify-content-center py-4 my-4">
+          <div className="container">
+            <div className="row text-center">
+              <div className="col-12">
+                <h5>{t("cv-select-option")}</h5>
+              </div>
+              <div className="col-12 col-sm-6">
+                <button 
+                    type="button" 
+                    className="btn btn-primary" 
+                    onClick={ () => this.changeCvSelected(selectors.resume)}
+                >
+                  {t("cv-resume")}
+                </button>
+              </div>
+              <div className="col-12 col-sm-6">
+                <button 
+                    type="button" 
+                    className="btn btn-outline-primary"
+                    onClick={ () => this.changeCvSelected(selectors.complete)}
+                >
+                  {t("cv-complete")}
+                </button>
+              </div>
+            </div>
+
+            <div className={this.state.cvSelected ? "row mt-3" : "row mt-3 d-none"}>
+                <div className="col-12 offset-2">
+                    <Document
+                        file={this.state.cvFile}
+                        options={{ workerSrc: "/pdf.worker.js" }}
+                        onLoadSuccess={this.onDocumentLoadSuccess}
+                    >
+                        <Page pageNumber={this.state.pageNumber} />
+                    </Document>
+                </div>
+    
+                <div className="col-12 offset-2">
+                    <div className="col-6 pt-2 mx-auto">
+                        <p>
+                            {t("cv-page")} {this.pageNumber || (this.numPages ? 1 : "--")} {t("cv-of")}{" "}
+                            {this.numPages || "--"}
+                        </p>
+                        <button
+                            type="button"
+                            disabled={this.state.pageNumber <= 1}
+                            onClick={this.previousPage}
+                        >
+                            {t("cv-previous")}
+                        </button>
+                        <button
+                            type="button"
+                            disabled={this.state.pageNumber >= this.state.numPages}
+                            onClick={this.nextPage}
+                        >
+                            {t("cv-next")}
+                        </button>
+                    </div>
+    
+                    <div className="col-6 pt-2 mx-auto">
+                        <a href={this.state.cvFile} target="_blank" rel="noopener noreferrer" download>
+                            <button className="btn btn-info">
+                            <i className="fas fa-download" />
+                            {t("cv-download-cv")}
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+          </div>
+        </div>
+    )
+  }
+}
+
+
+export default withTranslation()(CurriculumVitae)

@@ -42,7 +42,16 @@
 
         "resume-third-title" : "Étudiant / Freelancer",
         "resume-third-subtitle" : "Funchal, Madeira / Portugal",
-        "resume-third-text" : "Il a été proposé de développer une plate-forme publicitaire basée sur wordpress, dans laquelle il serait nécessaire de créer des fonctions PHP pour certaines actions sur la plate-forme, et en suivant les directives du concepteur qui a conçu des maquettes pour la plate-forme. Un système d'abonnement a également été créé pour cela, ce qui donnerait plus de visibilité aux annonces envoyées par les utilisateurs payants de la plateforme. Avec cette expérience j'ai acquis une autonomie pour pouvoir estimer / réaliser des travaux en dehors de l'environnement scolaire / universitaire et pour pouvoir avoir une approche plus réelle des difficultés de la zone, traitant les problèmes qu'un système traite lorsqu'il interagit. l'utilisateur final."
+        "resume-third-text" : "Il a été proposé de développer une plate-forme publicitaire basée sur wordpress, dans laquelle il serait nécessaire de créer des fonctions PHP pour certaines actions sur la plate-forme, et en suivant les directives du concepteur qui a conçu des maquettes pour la plate-forme. Un système d'abonnement a également été créé pour cela, ce qui donnerait plus de visibilité aux annonces envoyées par les utilisateurs payants de la plateforme. Avec cette expérience j'ai acquis une autonomie pour pouvoir estimer / réaliser des travaux en dehors de l'environnement scolaire / universitaire et pour pouvoir avoir une approche plus réelle des difficultés de la zone, traitant les problèmes qu'un système traite lorsqu'il interagit. l'utilisateur final.",
+
+        "cv-page": "Page",
+        "cv-of": "sur",
+        "cv-previous": "Précédent",
+        "cv-next": "Suivant",
+        "cv-download-cv": "Télécharger le CV",
+        "cv-select-option": "Sélectionnez une option",
+        "cv-resume": "Résumé",
+        "cv-complet": "Cv complet"
 
     }
 }
