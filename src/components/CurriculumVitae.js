@@ -25,7 +25,7 @@ class CurriculumVitae extends React.Component {
         this.setState({pageNumber: 1});
     }
 
-    changePage = (offset) => this.setState({pageNumber: ((prevPageNumber) => prevPageNumber + offset)});
+    changePage = (offset) => this.setState({pageNumber: (this.state.pageNumber + offset)});
 
     previousPage = () => this.changePage(-1);
   
@@ -51,8 +51,6 @@ class CurriculumVitae extends React.Component {
         this.showSpecificFile(string);
     }
     
-    
-
 
   render () {
     const { t } = this.props;
@@ -99,8 +97,8 @@ class CurriculumVitae extends React.Component {
                 <div className="col-12 offset-2">
                     <div className="col-6 pt-2 mx-auto">
                         <p>
-                            {t("cv-page")} {this.pageNumber || (this.numPages ? 1 : "--")} {t("cv-of")}{" "}
-                            {this.numPages || "--"}
+                            {t("cv-page")} {this.state.pageNumber || (this.state.numPages ? 1 : "--")} {t("cv-of")}{" "}
+                            {this.state.numPages || "--"}
                         </p>
                         <button
                             type="button"
