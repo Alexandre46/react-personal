@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { withTranslation } from "react-i18next";
 import { Document, Page } from "react-pdf";
 import CV from "../cv.pdf";
@@ -31,9 +31,8 @@ class CurriculumVitae extends React.Component {
   
     nextPage = () => this.changePage(1);
 
-    showSpecificFile = () => {
-        
-          switch(this.state.cvSelected) {
+    showSpecificFile = (string) => {
+          switch(string) {
               case selectors.resume:
                 this.setState({cvFile: CVRedesign})
                 break;
@@ -48,9 +47,8 @@ class CurriculumVitae extends React.Component {
     }
 
     changeCvSelected = (string) => {
-        console.log('change CV to: '+ string)
         this.setState({cvSelected: string});
-        this.showSpecificFile();
+        this.showSpecificFile(string);
     }
     
     
