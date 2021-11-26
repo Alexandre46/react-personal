@@ -5,7 +5,7 @@
         "pt" : "Portuguese",
 
         "introInitial" : "Hello, my name is ",
-        "introEnd" : " and navigate to discover more from me",
+        "introEnd" : " and feel free to navigate to discover a bit more from me",
         "introMore" : "I'm a software developer with {{age}} years-old from Madeira Island, Portugal",
         "introSentence" : "Knowledge is power. – Francis Bacon",
 
