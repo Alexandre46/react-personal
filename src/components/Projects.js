@@ -3,12 +3,20 @@ import { Button } from "react-bootstrap";
 import truncate from "./utils/common";
 
 const styles = {
+  root: {
+    width: "100%",
+    height: "100%",
+    marginTop: "200px",
+  },
+  item: {
+    ":hover": { transform: "scale(1.2)", backgroundColor: "transparent" },
+  },
   cardBox: {
     width: "100%",
     height: "100%",
   },
   cardImg: {
-    opacity: 0.2,
+    opacity: 0.9,
     width: "100%",
     minHeight: "50vh",
   },
@@ -33,7 +41,7 @@ export default class MyProjects extends Component {
           alt="Project art"
           style={styles.cardImg}
         />
-        <div className="card-img-overlay">
+        <div className="card-img-overlay" style={styles.item}>
           <h5 className="card-title" style={styles.cardTitle}>
             {projectname}
           </h5>
@@ -53,8 +61,11 @@ export default class MyProjects extends Component {
   render() {
     return (
       <>
-        <div className="row">
-          <div className="col-12 col-md-6 col-lg-4 col-xl-3">
+        <div className="row" styles={styles.root}>
+          <div
+            className="col-12 col-md-6 col-lg-4 col-xl-3"
+            styles={styles.item}
+          >
             <Button className="btn-info btn-block">
               <this.projectCard
                 bgimage={
