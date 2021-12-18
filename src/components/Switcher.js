@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import '../assets/scss/index.scss';
+import React, { Component } from "react";
+import "../assets/scss/index.scss";
 
 export default class Switcher extends Component {
   state = {
     checked: localStorage.getItem("theme") === "dark" ? true : false,
-    theme: localStorage.getItem("theme")
+    theme: localStorage.getItem("theme"),
   };
 
   componentDidMount() {
@@ -21,7 +21,7 @@ export default class Switcher extends Component {
         .getElementsByTagName("HTML")[0]
         .setAttribute("data-theme", localStorage.getItem("theme"));
       this.setState({
-        checked: true
+        checked: true,
       });
     } else {
       localStorage.setItem("theme", "light");
@@ -29,23 +29,23 @@ export default class Switcher extends Component {
         .getElementsByTagName("HTML")[0]
         .setAttribute("data-theme", localStorage.getItem("theme"));
       this.setState({
-        checked: false
+        checked: false,
       });
     }
   };
 
-    render () {
-        return (
-            <div className="float-left">
-              <label className="switch">
-                <input
-                  type="checkbox"
-                  defaultChecked={this.state.checked}
-                  onChange={() => this.toggleThemeChange()}
-                />
-                <span className="slider round" />
-              </label>
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div>
+        <label className="switch">
+          <input
+            type="checkbox"
+            defaultChecked={this.state.checked}
+            onChange={() => this.toggleThemeChange()}
+          />
+          <span className="slider round" />
+        </label>
+      </div>
+    );
+  }
 }
