@@ -1,27 +1,26 @@
 import React, { Component } from "react";
-import { Button } from "react-bootstrap";
 import truncate from "./utils/common";
 
 const styles = {
   root: {
     width: "100%",
     height: "100%",
-    marginTop: "200px",
+    marginTop: "5rem",
   },
-  item: {
-    ":hover": { transform: "scale(1.2)", backgroundColor: "transparent" },
+  projectElement: {
+    ":hover": { transform: "scale(1.1)" },
   },
   cardBox: {
     width: "100%",
     height: "100%",
   },
   cardImg: {
-    opacity: 0.9,
+    opacity: 0.2,
     width: "100%",
-    minHeight: "50vh",
+    height: "50vh",
   },
   cardTitle: {
-    color: "grey",
+    color: "white",
   },
 };
 
@@ -34,7 +33,7 @@ export default class MyProjects extends Component {
     projectrepo,
   }) {
     return (
-      <div className=" bg-dark text-white" style={styles.cardBox}>
+      <div className="bg-dark text-white projectElement" style={styles.cardBox}>
         <img
           className="card-img"
           src={bgimage}
@@ -61,12 +60,12 @@ export default class MyProjects extends Component {
   render() {
     return (
       <>
-        <div className="row" styles={styles.root}>
+        <div className="row" style={styles.root}>
           <div
             className="col-12 col-md-6 col-lg-4 col-xl-3"
-            styles={styles.item}
+            style={styles.item}
           >
-            <Button className="btn-info btn-block">
+            <div className="btn-info btn-block border">
               <this.projectCard
                 bgimage={
                   "https://res.cloudinary.com/cinforme/image/upload/v1639788800/personal%20website/cinforme-img.png"
@@ -78,30 +77,36 @@ export default class MyProjects extends Component {
                 }
                 projectrepo={"https://github.com/Alexandre46/CINFORME"}
               />
-            </Button>
+            </div>
           </div>
-          <div className="col-12 col-md-6 col-lg-3">
-            <Button className="btn-info btn-block">
+          <div
+            className="col-12 col-md-6 col-lg-4 col-xl-3"
+            style={styles.item}
+          >
+            <div className="btn-info btn-block border">
               <this.projectCard
                 bgimage={
-                  "https://res.cloudinary.com/cinforme/image/upload/v1639788800/personal%20website/cinforme-img.png"
+                  "https://res.cloudinary.com/cinforme/image/upload/v1639863220/personal%20website/vue-weather-app.png"
                 }
-                projectname={"Vue Weather SPA"}
+                projectname={"Weather Web app"}
                 projectstack={"VueJS / DarkSky API / Axios"}
                 projectinfo={
                   "Vue Weather Single Page Application to show city background image, weekly forecast for geolocation of user"
                 }
                 projectrepo={"https://github.com/Alexandre46/vue-node-weather"}
               />
-            </Button>
+            </div>
           </div>
-          <div className="col-12 col-md-6 col-lg-3">
-            <Button className="btn-info btn-block">
+          <div
+            className="col-12 col-md-6 col-lg-4 col-xl-3"
+            style={styles.item}
+          >
+            <div className="btn-info btn-block border">
               <this.projectCard
                 bgimage={
-                  "https://res.cloudinary.com/cinforme/image/upload/v1639788800/personal%20website/cinforme-img.png"
+                  "https://res.cloudinary.com/cinforme/image/upload/v1639864041/personal%20website/website.png"
                 }
-                projectname={"React personal site"}
+                projectname={"My website/portfolio"}
                 projectstack={
                   "React / React-router / React-boostrap & animations (css)"
                 }
@@ -110,15 +115,18 @@ export default class MyProjects extends Component {
                 }
                 projectrepo={"https://github.com/Alexandre46/react-personal"}
               />
-            </Button>
+            </div>
           </div>
-          <div className="col-12 col-md-6 col-lg-3">
-            <Button className="btn-info btn-block">
+          <div
+            className="col-12 col-md-6 col-lg-4 col-xl-3"
+            style={styles.item}
+          >
+            <div className="btn-info btn-block border">
               <this.projectCard
                 bgimage={
-                  "https://res.cloudinary.com/cinforme/image/upload/v1639788800/personal%20website/cinforme-img.png"
+                  "https://res.cloudinary.com/cinforme/image/upload/v1639863912/personal%20website/hccp.png"
                 }
-                projectname={"React Native HCCP"}
+                projectname={"HCCP Mobile app"}
                 projectstack={
                   "React Native / React Navigation / React Bootstrap"
                 }
@@ -127,7 +135,7 @@ export default class MyProjects extends Component {
                 }
                 projectrepo={"https://github.com/Alexandre46/react-personal"}
               />
-            </Button>
+            </div>
           </div>
         </div>
       </>

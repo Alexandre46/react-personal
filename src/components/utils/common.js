@@ -1,4 +1,4 @@
-const truncate = (str, max = 10) => {
+const truncate = (str, max = 20) => {
   const array = str.trim().split(" ");
   const ellipsis = array.length > max ? "..." : "";
 
