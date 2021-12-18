@@ -1,43 +1,125 @@
-import React , { Component } from 'react';
-import { Button } from 'react-bootstrap';
+import React, { Component } from "react";
+import { Button } from "react-bootstrap";
+import truncate from "./utils/common";
+
+const styles = {
+  cardBox: {
+    width: "100%",
+    height: "100%",
+  },
+  cardImg: {
+    opacity: 0.2,
+    width: "100%",
+    minHeight: "50vh",
+  },
+  cardTitle: {
+    color: "grey",
+  },
+};
 
 export default class MyProjects extends Component {
-    render() {
-        return (
-            <div class="mt-3">
+  projectCard({
+    bgimage,
+    projectname,
+    projectstack,
+    projectinfo,
+    projectrepo,
+  }) {
+    return (
+      <div className=" bg-dark text-white" style={styles.cardBox}>
+        <img
+          className="card-img"
+          src={bgimage}
+          alt="Project art"
+          style={styles.cardImg}
+        />
+        <div className="card-img-overlay">
+          <h5 className="card-title" style={styles.cardTitle}>
+            {projectname}
+          </h5>
+          <small className="card-text">{projectstack}</small>
+          <p className="card-text">{truncate(projectinfo)}</p>
+          <a href={projectrepo}>
+            <span role="img" aria-label="Github emoji">
+              🔗
+            </span>{" "}
+            {projectname} repository{" "}
+          </a>
+        </div>
+      </div>
+    );
+  }
+
+  render() {
+    return (
+      <>
+        <div className="row">
+          <div className="col-12 col-md-6 col-lg-4 col-xl-3">
             <Button className="btn-info btn-block">
-              <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">CINFORME</h5>
-                <small>Laravel / Vanilla JS / Bootstrap4</small>
-              </div>
-              <p class="mb-1">News platform, with an backoffice to insert news and also an news aggregator, using google translator API to store all content in two languages(english and portuguese)</p>
-              <small><a class="text-decoration-none text-dark" href="https://github.com/Alexandre46/CINFORME">🔗 https://github.com/Alexandre46/CINFORME</a></small>
+              <this.projectCard
+                bgimage={
+                  "https://res.cloudinary.com/cinforme/image/upload/v1639788800/personal%20website/cinforme-img.png"
+                }
+                projectname={"CINFORME"}
+                projectstack={"Laravel / Vanilla JS / Bootstrap4"}
+                projectinfo={
+                  "News platform, with an backoffice to insert news and also an news aggregator, using google translator API to store all content in two languages(english and portuguese)"
+                }
+                projectrepo={"https://github.com/Alexandre46/CINFORME"}
+              />
             </Button>
-            <Button className="btn-secondary btn-block">
-              <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Vue Weather SPA</h5>
-                <small>VueJS / DarkSky API / Axios</small>
-              </div>
-              <p class="mb-1">Vue Weather Single Page Application to show city background image , weekly forecast for geolocation of user</p>
-              <small class="text-muted"><a class="btn-secondary" href="https://github.com/Alexandre46/vue-node-weather">🔗 https://github.com/Alexandre46/vue-node-weather</a></small>
+          </div>
+          <div className="col-12 col-md-6 col-lg-3">
+            <Button className="btn-info btn-block">
+              <this.projectCard
+                bgimage={
+                  "https://res.cloudinary.com/cinforme/image/upload/v1639788800/personal%20website/cinforme-img.png"
+                }
+                projectname={"Vue Weather SPA"}
+                projectstack={"VueJS / DarkSky API / Axios"}
+                projectinfo={
+                  "Vue Weather Single Page Application to show city background image, weekly forecast for geolocation of user"
+                }
+                projectrepo={"https://github.com/Alexandre46/vue-node-weather"}
+              />
             </Button>
-            <Button className="btn-block">
-              <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">React personal site</h5>
-                <small>React / React-router / React-boostrap & animations (css)</small>
-              </div>
-              <p class="mb-1">Personal site/blog just to develop react knowledge</p>
-              <small class="text-muted"><a class="btn-secondary" href="https://github.com/Alexandre46/react-personal">🔗 https://github.com/Alexandre46/react-personal</a></small>
+          </div>
+          <div className="col-12 col-md-6 col-lg-3">
+            <Button className="btn-info btn-block">
+              <this.projectCard
+                bgimage={
+                  "https://res.cloudinary.com/cinforme/image/upload/v1639788800/personal%20website/cinforme-img.png"
+                }
+                projectname={"React personal site"}
+                projectstack={
+                  "React / React-router / React-boostrap & animations (css)"
+                }
+                projectinfo={
+                  "Personal site/blog just to develop react knowledge "
+                }
+                projectrepo={"https://github.com/Alexandre46/react-personal"}
+              />
             </Button>
-            <Button className="btn-warning btn-block">
-              <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">React Native HCCP</h5>
-                <small>React Native / React Navigation / React Bootstrap /</small>
-              </div>
-              <p class="mb-1">Mobile application to know a bit of Android / iOS apps building a simple app to pick photos / manage on CMS backend and navigate through some screens to see multiple media assets</p>
-              <small class="text-muted"><a class="btn-secondary" href="https://github.com/Alexandre46/react-personal">🔗 https://github.com/Alexandre46/react-personal</a></small>
+          </div>
+          <div className="col-12 col-md-6 col-lg-3">
+            <Button className="btn-info btn-block">
+              <this.projectCard
+                bgimage={
+                  "https://res.cloudinary.com/cinforme/image/upload/v1639788800/personal%20website/cinforme-img.png"
+                }
+                projectname={"React Native HCCP"}
+                projectstack={
+                  "React Native / React Navigation / React Bootstrap"
+                }
+                projectinfo={
+                  "Mobile application to know a bit of Android / iOS apps building a simple app to pick photos / manage on CMS backend and navigate through some screens to see multiple media assets"
+                }
+                projectrepo={"https://github.com/Alexandre46/react-personal"}
+              />
             </Button>
-           </div>
-        )
-    }
+          </div>
+        </div>
+      </>
+    );
+  }
 }
