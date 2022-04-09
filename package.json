@@ -18,7 +18,7 @@
     "import-all.macro": "^2.0.3",
     "jquery": "^3.6.0",
     "mdx.macro": "^0.2.9",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "node-sass": "^4.13.1",
     "pm2": "^4.1.2",
     "popper": "^1.0.1",
