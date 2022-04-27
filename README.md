@@ -22,6 +22,13 @@ Stack:
 * CMS will be auto deployed picking master branch after PR
 * Script deploy to gh pages
 
+## Getting started
+
+* git clone this
+* Open IDE and terminal
+* Double check branch you need to work
+* Last but not least remove package-lock.json and npm install to add all dependencies
+
 
 ## URL
 
