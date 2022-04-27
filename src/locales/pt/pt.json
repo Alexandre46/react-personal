@@ -15,6 +15,8 @@
         "contactEmail" : "E-mail",
         "contactMessage" : "Mensagem",
         "contactSend" : "Enviar",
+        "contactWithSuccess": "Email enviado com sucesso",
+        "contactWithError": "Whoops! Falha ao enviar email, por favor tente novamente mais tarde",
 
         "menuHome" : "Início",
         "menuBlog" : "Blog",
@@ -28,9 +30,15 @@
         "notFound" : "Não encontrado",
         "backHome" : "Voltar ao início",
 
+        "resume-newest-title" : "Yacooba - Fullstack developer",
+        "resume-newest-subtitle" : "Remote",
+        "resume-newest-text" : "Pelo fascínio do mundo da blockchain acabei por querer mudar de carreira, senti que precisava de dar mais um puxão no meu percurso e obter novos desafios.Atualmente trabalho com metodologia Agile em ambas as partes (Full-stack) sendo que no frontend diariamente componho o visual (Design atómico) com componentes React, acompanhados de unit tests e Storybook a validar a implementaçao dessa mesma componente. As páginas de cada um dos microfrontends que temos no nosso projecto em NextJS é servido estáticamente no build time.(SSG). Estou a desenvolver a solução de backend da empresa com abordagem domain driven development, em que concluo que ao transpor a lógica de negócio, torna mais dificil ocorrer erros no backend, atualmente uso nodeJS com typescript. Tive o contacto com smart contracts (solidity) usando ja as normas da openzeppelin tendo auxilio do hardhat e a lib ethers.js e web3.js lançando na rede Ethereum um contracto feito em ERC721",
+        "resume-newest-note" : "",
+        "resume-newest-tech-summary": ["TypeScript", "NextJS", "MaterialUI", "Storybook", "Git", "NodeJS", "DDD", "Postgres", "GraphQL", "ethers", "web3", "Hardhat", "Solidity", "Blockchain"],
+
         "resume-first-title" : "Nearsoft Solutions - Fullstack developer",
         "resume-first-subtitle" : "Funchal, Madeira / Portugal",
-        "resume-first-text" : "Iniciei nesta empresa como consultor para a empresa irlandesa de bebidas OrbisMES, utilizando MSQL, revendo T-SQL / stored procedures e analisando todo o fluxo de cerveja da empresa. Atualmente estou a trabalhar com a stack (Laravel / MySQL/ APIs RESTFul / JavaScript / Bootstrap). Usamos Docker containers diáriamente para correr todos os projetos com sistema de controle de versão GIT e usar serviços AWS como ECR para armazenar todas as imagens docker, servir ativos com S3 e armazenar dados com RDS, principalmente MySQL. Trabalho com pipelines de CI/CD conectados à nossa conta gitlab e algumas regras rígidas (*) sobre teste de unidade / linters de código. Desenvolvedor autônomo gerenciando pequenos projetos fazendo metodologia Agile em todos os projetos trabalhados.",
+        "resume-first-text" : "Iniciei nesta empresa como consultor para a empresa Irlandesa de bebidas OrbisMES, utilizando MSQL, revendo T-SQL / stored procedures e analisando todo o fluxo de cerveja da empresa. Atualmente estou a trabalhar com a stack (Laravel / MySQL/ APIs RESTFul / JavaScript / Bootstrap). Usamos Docker containers diáriamente para correr todos os projetos com sistema de controle de versão GIT e usar serviços AWS como ECR para armazenar todas as imagens docker, servir ativos com S3 e armazenar dados com RDS, principalmente MySQL. Trabalho com pipelines de CI/CD conectados à nossa conta gitlab e algumas regras rígidas (*) sobre teste de unidade / linters de código. Tive o privilégio de formar (onsite) e acompanhar(remotamente) uma equipa de trabalho na Macedónia composta por 3 pessoas.",
         "resume-first-note" : "Por regras estritas, qualquer solicitação de mesclagem SÓ pode ser aprovada se passar em alguns% da cobertura de teste em testes de unidade",
         "resume-first-tech-summary": [ "PHP",  "JavaScript", "CSS", "Bootstrap", "SCSS", "HTML", "Docker", "Git", "AWS", "CLI"],
 
@@ -50,6 +58,6 @@
         "cv-download-cv": "Descarregar CV",
         "cv-select-option": "Selecione uma opção",
         "cv-resume": "Resumo",
-        "cv-complete": "CV completo"
+        "cv-complete": "Completo"
     }
 }

@@ -15,6 +15,8 @@
         "contactEmail" : "Courrier",
         "contactMessage" : "Message",
         "contactSend" : "Envoyer",
+        "contactWithSuccess": "E-mail envoyé avec succès",
+        "contactWithError": "Oups ! L'e-mail n'a pas été envoyé. Veuillez réessayer plus tard",
 
         "menuHome" : "Accueil",
         "menuBlog" : "Blog",
@@ -29,9 +31,15 @@
         "notFound" : "Pas trouvé",
         "backHome" : "Arrivez accueil",
 
+        "resume-newest-title" : "Yacooba - Fullstack developer",
+        "resume-newest-subtitle" : "Remote",
+        "resume-newest-text" : "De par la fascination du monde de la blockchain, j'ai fini par vouloir changer de carrière, j'ai senti qu'il fallait que je pousse ma voie et me lance de nouveaux défis visuels (Atomic Design) avec des composants React, accompagnés de tests unitaires et Storybook pour valider la mise en place du même composant. Les pages de chacun des microfrontends que nous avons dans notre projet NextJS sont servies statiquement au moment de la construction (SSG). Je développe la solution backend de l'entreprise avec une approche de développement axée sur le domaine, dans laquelle je conclus que lors de la transposition de la logique métier, il est plus difficile pour les erreurs de se produire dans le backend, j'utilise actuellement nodeJS avec dactylographie. J'ai eu des contacts avec des contrats intelligents (solidité) utilisant les standards openzeppelin avec l'aide de hardhat et lib ethers.js et web3.js en lançant un contrat réalisé en ERC721 sur le réseau Ethereum",
+        "resume-newest-note" : "",
+        "resume-newest-tech-summary": ["TypeScript", "NextJS", "MaterialUI", "Storybook", "Git", "NodeJS", "DDD", "Postgres", "GraphQL", "ethers", "web3", "Hardhat", "Solidity", "Blockchain"],
+
         "resume-first-title" : "Nearsoft Solutions - Fullstack developer",
         "resume-first-subtitle" : "Funchal, Madeira / Portugal",
-        "resume-first-text" : "A commencé dans cette entreprise en tant que consultant pour la société irlandaise de boissons OrbisMES, en utilisant MSQL, en examinant les procédures T-SQL / stockées et en analysant tous les flux de bière pour l'entreprise. Travaillant actuellement avec la pile Laravel en utilisant MySQL, les API RESTFul rendent les frontaux avec vanilla js en utilisant SCSS avec le framework Bootstrap. Nous utilisons le docker quotidien pour emballer tous les projets avec le système de contrôle de version git et utilisons des services AWS comme ECR pour stocker toutes les images docker, servir des actifs avec S3 et stocker des données avec RDS principalement MySQL. Travailler avec des pipelines CI / CD connectés à notre compte gitlab et quelques règles strictes (*) sur les tests unitaires / les linters de code. Développeur autonome gérant de petits projets faisant de la méthode Agile sur tous les projets travaillés.",
+        "resume-first-text" : "A commencé dans cette entreprise en tant que consultant pour la société irlandaise de boissons OrbisMES, en utilisant MSQL, en examinant les procédures T-SQL / stockées et en analysant tous les flux de bière pour l'entreprise. Travaillant actuellement avec la pile Laravel en utilisant MySQL, les API RESTFul rendent les frontaux avec vanilla js en utilisant SCSS avec le framework Bootstrap. Nous utilisons le docker quotidien pour emballer tous les projets avec le système de contrôle de version git et utilisons des services AWS comme ECR pour stocker toutes les images docker, servir des actifs avec S3 et stocker des données avec RDS principalement MySQL. Travailler avec des pipelines CI / CD connectés à notre compte gitlab et quelques règles strictes (*) sur les tests unitaires / les linters de code. J'ai eu le privilège de former (sur site) et d'accompagner (à distance) une équipe de travail en Macédoine composée de 3 personnes.",
         "resume-first-note" : "Par des règles strictes, toute demande de fusion peut UNIQUEMENT être approuvée si elle réussit un pourcentage de couverture de test sur les tests unitaires",
         "resume-first-tech-summary": [ "PHP",  "JavaScript", "CSS", "Bootstrap", "SCSS", "HTML", "Docker", "Git", "AWS", "CLI"],
 
@@ -51,7 +59,7 @@
         "cv-download-cv": "Télécharger le CV",
         "cv-select-option": "Sélectionnez une option",
         "cv-resume": "Résumé",
-        "cv-complet": "Cv complet"
+        "cv-complet": "Complet"
 
     }
 }
