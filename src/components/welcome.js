@@ -13,6 +13,11 @@ const styles = {
   introText: {
     textAlign: "justify",
   },
+  imgThumbnail: {
+    ':hover': {
+      transform: 'scale(1.20)'
+    }
+  }
 };
 
 // eslint-disable-next-line no-unused-vars
@@ -60,6 +65,7 @@ class Welcome extends Component {
               <div className="col-4 col-md-2 my-auto">
                 <img
                   class="ml-2 my-2 img-fluid img-thumbnail rounded-circle"
+                  style={styles.imgThumbnail}
                   width={120}
                   height={120}
                   src={selfie}

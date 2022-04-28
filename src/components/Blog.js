@@ -71,17 +71,17 @@ render() {
     : (
       <div className="postsList pt-4">
         <div className="row">
-          <div className="col-6">
+          <div className="col-xs-12 col-sm-6">
             <h2 className="ProductList-title pb-4"> Total Posts <Badge variant="secondary"> {this.state.posts.length} </Badge></h2>
           </div>
-          <div className="col-6">
+          <div className="col-xs-12 col-sm-6">
             <div className="row">
-              <div className="col-12 col-lg-4"><span> Filter posts by date: </span></div>
-              <div className="col-12 col-lg-4">
-                <button className="btn btn-sm btn-outline-secondary sorter-buttons" id="sorter-asc" value="asc" onClick={(e) => this.setSorter(e)}> ▲ Oldest to Most recent </button>
+              <div className="col-3 offset-4"><span> Filter posts by date: </span></div>
+              <div className="col-2">
+                <button className="btn btn-sm btn-outline-secondary sorter-buttons" id="sorter-asc" value="asc" onClick={(e) => this.setSorter(e)}> ▲ ASC </button>
               </div>
-              <div className="col-12 col-lg-4">
-              <button className="btn btn-sm btn-outline-secondary sorter-buttons" id="sorter-desc" value="desc" onClick={(e) => this.setSorter(e)}> ▼ Most recent to oldest </button>
+              <div className="col-2">
+              <button className="btn btn-sm btn-outline-secondary sorter-buttons" id="sorter-desc" value="desc" onClick={(e) => this.setSorter(e)}> ▼ DESC </button>
               </div>
             </div>
           </div>

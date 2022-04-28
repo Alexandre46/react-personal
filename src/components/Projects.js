@@ -22,6 +22,10 @@ const styles = {
   cardTitle: {
     color: "white",
   },
+  cardEntry: {
+    left: '10px',
+    right: '10px'
+  }
 };
 
 export default class MyProjects extends Component {
@@ -40,12 +44,12 @@ export default class MyProjects extends Component {
           alt="Project art"
           style={styles.cardImg}
         />
-        <div className="card-img-overlay" style={styles.item}>
-          <h5 className="card-title" style={styles.cardTitle}>
+        <div className="card-img-overlay" style={styles.cardEntry}>
+          <h5 className="card-title h3" style={styles.cardTitle}>
             {projectname}
           </h5>
-          <small className="card-text">{projectstack}</small>
-          <p className="card-text">{truncate(projectinfo)}</p>
+          <small className="card-text font-weight-bold h6">{projectstack}</small>
+          <p className="card-text mt-4">{truncate(projectinfo)}</p>
           <a href={projectrepo}>
             <span role="img" aria-label="Github emoji">
               🔗
@@ -61,8 +65,26 @@ export default class MyProjects extends Component {
     return (
       <>
         <div className="row" style={styles.root}>
+        <div
+            className="col-12 col-md-6 col-lg-4"
+            style={styles.item}
+          >
+            <div className="btn-info btn-block border">
+              <this.projectCard
+                bgimage={
+                  "https://res.cloudinary.com/cinforme/image/upload/v1651100683/personal%20website/Screenshot_2022-04-28_at_00.03.53.png"
+                }
+                projectname={"CINFORME V2"}
+                projectstack={"NextJS / MongoDB / NodeJS / MaterialUI 5"}
+                projectinfo={
+                  "Complete refactor of news platform CINFORME using Javascript tech for all stack)"
+                }
+                projectrepo={"https://github.com/Alexandre46/cinforme-version-2"}
+              />
+            </div>
+          </div>
           <div
-            className="col-12 col-md-6 col-lg-4 col-xl-3"
+            className="col-12 col-md-6 col-lg-4"
             style={styles.item}
           >
             <div className="btn-info btn-block border">
@@ -80,7 +102,7 @@ export default class MyProjects extends Component {
             </div>
           </div>
           <div
-            className="col-12 col-md-6 col-lg-4 col-xl-3"
+            className="col-12 col-md-6 col-lg-4"
             style={styles.item}
           >
             <div className="btn-info btn-block border">
@@ -88,7 +110,7 @@ export default class MyProjects extends Component {
                 bgimage={
                   "https://res.cloudinary.com/cinforme/image/upload/v1639863220/personal%20website/vue-weather-app.png"
                 }
-                projectname={"Weather Web app"}
+                projectname={"Weather SPA"}
                 projectstack={"VueJS / DarkSky API / Axios"}
                 projectinfo={
                   "Vue Weather Single Page Application to show city background image, weekly forecast for geolocation of user"
@@ -98,7 +120,7 @@ export default class MyProjects extends Component {
             </div>
           </div>
           <div
-            className="col-12 col-md-6 col-lg-4 col-xl-3"
+            className="col-12 col-md-6 col-lg-4"
             style={styles.item}
           >
             <div className="btn-info btn-block border">
@@ -106,7 +128,7 @@ export default class MyProjects extends Component {
                 bgimage={
                   "https://res.cloudinary.com/cinforme/image/upload/v1639864041/personal%20website/website.png"
                 }
-                projectname={"My website/portfolio"}
+                projectname={"Portfolio"}
                 projectstack={
                   "React / React-router / React-boostrap & animations (css)"
                 }
@@ -118,7 +140,7 @@ export default class MyProjects extends Component {
             </div>
           </div>
           <div
-            className="col-12 col-md-6 col-lg-4 col-xl-3"
+            className="col-12 col-md-6 col-lg-4"
             style={styles.item}
           >
             <div className="btn-info btn-block border">
@@ -126,7 +148,7 @@ export default class MyProjects extends Component {
                 bgimage={
                   "https://res.cloudinary.com/cinforme/image/upload/v1639863912/personal%20website/hccp.png"
                 }
-                projectname={"HCCP Mobile app"}
+                projectname={"HCCP Mobile App"}
                 projectstack={
                   "React Native / React Navigation / React Bootstrap"
                 }

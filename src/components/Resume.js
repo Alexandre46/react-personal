@@ -7,16 +7,37 @@ import 'react-vertical-timeline-component/style.min.css';
 class Resume extends Component {
     render() {
         const { t } = this.props;
+        const newestTechSummary = t('resume-newest-tech-summary', { returnObjects: true });
         const firstTechSummary = t('resume-first-tech-summary', { returnObjects: true });
         const secondTechSummary = t('resume-second-tech-summary', { returnObjects: true });
         
         return(
             <VerticalTimeline>
+                <VerticalTimelineElement
+                className="vertical-timeline-element--work yacooba-container"
+                contentStyle={{ background: '#41c337', color: 'white' }}
+                contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+                date="2022 - present"
+                iconStyle={{ background: '#fff', color: '#fff' }}
+                iconClassName="yacooba-icon"
+            >
+                <h2 className="vertical-timeline-element-title"> {t("resume-newest-title")}  </h2>
+
+                <h4 className="vertical-timeline-element-subtitle"> {t("resume-newest-subtitle")}  </h4>
+                <p>
+                {t("resume-newest-text")}
+                </p>
+                <p>
+                {newestTechSummary.map(item => {
+                    return <span className="badge badge-dark px-1 mx-1">{ item }</span>
+                })}
+                </p>
+            </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work nearsoft-container"
                 contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                 contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-                date="2018 - Present"
+                date="2018 - 2022"
                 iconStyle={{ background: '#fff', color: '#fff' }}
                 iconClassName="nearsoft-icon"
             >
