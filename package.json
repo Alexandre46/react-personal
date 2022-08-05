@@ -50,6 +50,7 @@
     "start": "react-scripts --max_old_space_size=4096 start",
     "build": "react-scripts --max_old_space_size=4096 build",
     "test": "react-scripts test",
+    "format": "npx prettier --write .",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -69,6 +70,7 @@
   },
   "homepage": "https://alexandreabreu.site",
   "devDependencies": {
-    "postcss-loader": "^3.0.0"
+    "postcss-loader": "^3.0.0",
+    "prettier": "2.7.1"
   }
 }

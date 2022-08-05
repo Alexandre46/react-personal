@@ -23,9 +23,9 @@ const styles = {
     color: "white",
   },
   cardEntry: {
-    left: '10px',
-    right: '10px'
-  }
+    left: "10px",
+    right: "10px",
+  },
 };
 
 export default class MyProjects extends Component {
@@ -48,7 +48,9 @@ export default class MyProjects extends Component {
           <h5 className="card-title h3" style={styles.cardTitle}>
             {projectname}
           </h5>
-          <small className="card-text font-weight-bold h6">{projectstack}</small>
+          <small className="card-text font-weight-bold h6">
+            {projectstack}
+          </small>
           <p className="card-text mt-4">{truncate(projectinfo)}</p>
           <a href={projectrepo}>
             <span role="img" aria-label="Github emoji">
@@ -65,10 +67,7 @@ export default class MyProjects extends Component {
     return (
       <>
         <div className="row" style={styles.root}>
-        <div
-            className="col-12 col-md-6 col-lg-4"
-            style={styles.item}
-          >
+          <div className="col-12 col-md-6 col-lg-4" style={styles.item}>
             <div className="btn-info btn-block border">
               <this.projectCard
                 bgimage={
@@ -79,14 +78,13 @@ export default class MyProjects extends Component {
                 projectinfo={
                   "Complete refactor of news platform CINFORME using Javascript tech for all stack)"
                 }
-                projectrepo={"https://github.com/Alexandre46/cinforme-version-2"}
+                projectrepo={
+                  "https://github.com/Alexandre46/cinforme-version-2"
+                }
               />
             </div>
           </div>
-          <div
-            className="col-12 col-md-6 col-lg-4"
-            style={styles.item}
-          >
+          <div className="col-12 col-md-6 col-lg-4" style={styles.item}>
             <div className="btn-info btn-block border">
               <this.projectCard
                 bgimage={
@@ -101,10 +99,7 @@ export default class MyProjects extends Component {
               />
             </div>
           </div>
-          <div
-            className="col-12 col-md-6 col-lg-4"
-            style={styles.item}
-          >
+          <div className="col-12 col-md-6 col-lg-4" style={styles.item}>
             <div className="btn-info btn-block border">
               <this.projectCard
                 bgimage={
@@ -119,10 +114,7 @@ export default class MyProjects extends Component {
               />
             </div>
           </div>
-          <div
-            className="col-12 col-md-6 col-lg-4"
-            style={styles.item}
-          >
+          <div className="col-12 col-md-6 col-lg-4" style={styles.item}>
             <div className="btn-info btn-block border">
               <this.projectCard
                 bgimage={
@@ -139,10 +131,7 @@ export default class MyProjects extends Component {
               />
             </div>
           </div>
-          <div
-            className="col-12 col-md-6 col-lg-4"
-            style={styles.item}
-          >
+          <div className="col-12 col-md-6 col-lg-4" style={styles.item}>
             <div className="btn-info btn-block border">
               <this.projectCard
                 bgimage={

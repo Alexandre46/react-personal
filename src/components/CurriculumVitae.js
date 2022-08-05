@@ -25,14 +25,14 @@ class CurriculumVitae extends React.Component {
     this.setState({ pageNumber: 1 });
   };
 
-  changePage = (offset) =>
+  changePage = offset =>
     this.setState({ pageNumber: this.state.pageNumber + offset });
 
   previousPage = () => this.changePage(-1);
 
   nextPage = () => this.changePage(1);
 
-  showSpecificFile = (string) => {
+  showSpecificFile = string => {
     switch (string) {
       case selectors.resume:
         this.setState({ cvFile: CVRedesign });
@@ -46,7 +46,7 @@ class CurriculumVitae extends React.Component {
     }
   };
 
-  changeCvSelected = (string) => {
+  changeCvSelected = string => {
     this.setState({ cvSelected: string });
     this.showSpecificFile(string);
   };

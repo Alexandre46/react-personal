@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { Table } from 'react-bootstrap';
+import React, { Component } from "react";
+import { Table } from "react-bootstrap";
 
 class MyTable extends Component {
   render() {
@@ -33,9 +33,8 @@ class MyTable extends Component {
           </tbody>
         </Table>
       </div>
-      
-    )
+    );
   }
 }
 
-export default MyTable
+export default MyTable;

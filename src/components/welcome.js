@@ -14,10 +14,10 @@ const styles = {
     textAlign: "justify",
   },
   imgThumbnail: {
-    ':hover': {
-      transform: 'scale(1.20)'
-    }
-  }
+    ":hover": {
+      transform: "scale(1.20)",
+    },
+  },
 };
 
 // eslint-disable-next-line no-unused-vars
