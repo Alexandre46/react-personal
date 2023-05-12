@@ -5,6 +5,7 @@ import CV from '../../src/cv.pdf';
 import CVRedesign from '../../src/cv-redesign.pdf';
 import CVNewest from '../../src/cv-atualizado-2023.pdf';
 import { Col, Container, Row } from 'react-bootstrap';
+import { useTranslation } from 'react-i18next';
 
 const styles = {
   cvDocument: {
@@ -22,46 +23,46 @@ const selectors = {
   complete: 'complete'
 };
 
-const CurriculumVitae = useMemo(() => {
+const CurriculumVitae = () => {
   const [numPages, setNumPages] = React.useState(null);
   const [pageNumber, setPageNumber] = React.useState(1);
   const [cvSelected, setCvSelected] = React.useState(null);
   const [cvFile, setCvFile] = React.useState(null);
 
-  onDocumentLoadSuccess = ({ numPages }) => {
+  const { t } = useTranslation();
+
+  const onDocumentLoadSuccess = ({ numPages }) => {
     setNumPages(numPages);
     setPageNumber(1);
   };
 
-  changePage = (offset) => setPageNumber((prevState) => prevState + offset);
+  const changePage = (offset) => setPageNumber((prevState) => prevState + offset);
 
-  previousPage = () => this.changePage(-1);
+  const previousPage = () => changePage(-1);
 
-  nextPage = () => this.changePage(1);
+  const nextPage = () => changePage(1);
 
-  showSpecificFile = (string) => {
+  const showSpecificFile = (string) => {
     switch (string) {
       case selectors.newest:
-        this.setState({ cvFile: CVNewest });
+        setCvFile(CVNewest);
         break;
       case selectors.resume:
-        this.setState({ cvFile: CVRedesign });
+        setCvFile(CVRedesign);
         break;
       case selectors.complete:
-        this.setState({ cvFile: CV });
+        setCvFile(CV);
         break;
       default:
-        this.setState({ cvFile: CV });
+        setCvFile(CV);
         break;
     }
   };
 
-  changeCvSelected = (string) => {
-    this.setState({ cvSelected: string });
-    this.showSpecificFile(string);
+  const changeCvSelected = (string) => {
+    setCvSelected(string);
+    showSpecificFile(string);
   };
-
-  const { t } = this.props;
 
   return (
     <Container>
@@ -75,11 +76,11 @@ const CurriculumVitae = useMemo(() => {
           <button
             type="button"
             className={
-              this.state.cvSelected === selectors.resume
+              cvSelected === selectors.resume
                 ? 'btn btn-primary active btn-outline-primary'
                 : 'btn btn-light'
             }
-            onClick={() => this.changeCvSelected(selectors.newest)}>
+            onClick={() => changeCvSelected(selectors.newest)}>
             {t('cv-newest')}
           </button>
         </Col>
@@ -87,11 +88,11 @@ const CurriculumVitae = useMemo(() => {
           <button
             type="button"
             className={
-              this.state.cvSelected === selectors.resume
+              cvSelected === selectors.resume
                 ? 'btn btn-primary active btn-outline-primary'
                 : 'btn btn-primary'
             }
-            onClick={() => this.changeCvSelected(selectors.resume)}>
+            onClick={() => changeCvSelected(selectors.resume)}>
             {t('cv-resume')}
           </button>
         </Col>
@@ -99,11 +100,11 @@ const CurriculumVitae = useMemo(() => {
           <button
             type="button"
             className={
-              this.state.cvSelected === selectors.complete
+              cvSelected === selectors.complete
                 ? 'btn btn-secondary active btn-outline-secondary'
                 : 'btn btn-secondary'
             }
-            onClick={() => this.changeCvSelected(selectors.complete)}>
+            onClick={() => changeCvSelected(selectors.complete)}>
             {t('cv-complete')}
           </button>
         </Col>
@@ -114,10 +115,10 @@ const CurriculumVitae = useMemo(() => {
           <div className="col-12" style={styles.alignCenter}>
             <Document
               className={styles.cvDocument}
-              file={this.state.cvFile}
+              file={cvFile}
               loading="Loading CV PDF..."
-              onLoadSuccess={this.onDocumentLoadSuccess}>
-              <Page pageNumber={this.state.pageNumber} />
+              onLoadSuccess={onDocumentLoadSuccess}>
+              <Page pageNumber={pageNumber} />
             </Document>
           </div>
         </Col>
@@ -128,26 +129,22 @@ const CurriculumVitae = useMemo(() => {
         </Col>
         <Row>
           <Col xs={12} style={styles.alignCenter}>
-            {t('cv-page')} {this.state.pageNumber || (this.state.numPages ? 1 : '--')} {t('cv-of')}{' '}
-            {this.state.numPages || '--'}
+            {t('cv-page')} {pageNumber || (numPages ? 1 : '--')} {t('cv-of')} {numPages || '--'}
           </Col>
         </Row>
         <Row>
           <Col xs={12} style={styles.alignCenter}>
-            <button type="button" disabled={this.state.pageNumber <= 1} onClick={this.previousPage}>
+            <button type="button" disabled={pageNumber <= 1} onClick={previousPage}>
               {t('cv-previous')}
             </button>
-            <button
-              type="button"
-              disabled={this.state.pageNumber >= this.state.numPages}
-              onClick={this.nextPage}>
+            <button type="button" disabled={pageNumber >= numPages} onClick={nextPage}>
               {t('cv-next')}
             </button>
           </Col>
         </Row>
         <Row>
           <Col xs={12} style={styles.alignCenter}>
-            <a href={this.state.cvFile} target="_blank" rel="noopener noreferrer" download>
+            <a href={cvFile} target="_blank" rel="noopener noreferrer" download>
               <button className="btn btn-info">
                 <i className="fas fa-download" />
                 {t('cv-download-cv')}
@@ -158,6 +155,6 @@ const CurriculumVitae = useMemo(() => {
       </Row>
     </Container>
   );
-}, []);
+};
 
 export default withTranslation()(CurriculumVitae);
