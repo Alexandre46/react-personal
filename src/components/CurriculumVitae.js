@@ -26,8 +26,8 @@ const selectors = {
 const CurriculumVitae = () => {
   const [numPages, setNumPages] = React.useState(null);
   const [pageNumber, setPageNumber] = React.useState(1);
-  const [cvSelected, setCvSelected] = React.useState(null);
-  const [cvFile, setCvFile] = React.useState(null);
+  const [cvSelected, setCvSelected] = React.useState(selectors.newest);
+  const [cvFile, setCvFile] = React.useState(CVNewest);
 
   const { t } = useTranslation();
 
