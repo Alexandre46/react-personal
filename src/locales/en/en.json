@@ -1,5 +1,5 @@
 {
-  "translations": {
+  "translation": {
     "en": "English",
     "fr": "French",
     "pt": "Portuguese",
@@ -15,13 +15,14 @@
     "contactEmail": "Email",
     "contactMessage": "Message",
     "contactSend": "Send",
+    "contactClear": "Clear",
     "contactWithSuccess": "Email sent with success",
     "contactWithError": "Whoops! Email was not sent. Please try again later",
 
     "menuHome": "Home",
     "menuBlog": "Blog",
     "menuProjects": "Projects",
-    "menuAboutMe": "About me",
+    "menuAboutMe": "About",
     "menuResume": "Resume",
     "menuCV": "CV",
     "menuContact": "Contact",
@@ -93,6 +94,7 @@
     "cv-download-cv": "Download CV",
     "cv-select-option": "Select an option",
     "cv-resume": "Summary",
-    "cv-complete": "Extended"
+    "cv-complete": "Extended",
+    "cv-newest": "Newest"
   }
 }

@@ -1,17 +1,17 @@
-import React, { Component, useState, CustomToggle, CustomMenu } from "react";
-import { Dropdown, FormControl } from "react-bootstrap";
-import i18n from "./i18n";
-import { withTranslation } from "react-i18next";
+import React, { Component, useState, CustomToggle, CustomMenu } from 'react';
+import { Dropdown, FormControl } from 'react-bootstrap';
+import { withTranslation } from 'react-i18next';
+import i18n from './i18n';
 
 class languageSwitcher extends Component {
   state = {
-    value: "en",
+    value: 'en'
   };
-  handleChange = event => {
-    console.log("selected val is ", event);
-    let newlang = event;
-    this.setState(prevState => ({ value: newlang }));
-    console.log("state value is", newlang);
+
+  handleChange = (event) => {
+    console.log('event', event);
+    const newlang = event;
+    this.setState((prevState) => ({ value: newlang }));
     i18n.changeLanguage(newlang);
   };
 
@@ -21,11 +21,10 @@ class languageSwitcher extends Component {
     <a
       href=""
       ref={ref}
-      onClick={e => {
+      onClick={(e) => {
         e.preventDefault();
         onClick(e);
-      }}
-    >
+      }}>
       {children}
       &#x25bc;
     </a>
@@ -34,27 +33,21 @@ class languageSwitcher extends Component {
   // forwardRef again here!
   // Dropdown needs access to the DOM of the Menu to measure it
   CustomMenu = React.forwardRef(
-    ({ children, style, className, "aria-labelledby": labeledBy }, ref) => {
-      const [value, setValue] = useState("");
-
+    ({ children, style, className, 'aria-labelledby': labeledBy }, ref) => {
+      const [value, setValue] = useState('');
+      console.log('value'.value);
       return (
-        <div
-          ref={ref}
-          style={style}
-          className={className}
-          aria-labelledby={labeledBy}
-        >
+        <div ref={ref} style={style} className={className} aria-labelledby={labeledBy}>
           <FormControl
             autoFocus
             className="mx-3 my-2 w-auto"
             placeholder="Type to filter..."
-            onChange={e => setValue(e.target.value)}
+            onChange={(e) => setValue(e.target.value)}
             value={value}
           />
           <ul className="list-unstyled">
             {React.Children.toArray(children).filter(
-              child =>
-                !value || child.props.children.toLowerCase().startsWith(value)
+              (child) => !value || child.props.children.toLowerCase().startsWith(value)
             )}
           </ul>
         </div>
@@ -71,8 +64,7 @@ class languageSwitcher extends Component {
           id="dropdown-custom-components"
           drop="left"
           variant="transparent"
-          className="button-transparent border-0"
-        >
+          className="button-transparent border-0">
           <img
             src="https://res.cloudinary.com/cinforme/image/upload/c_scale,w_30/v1583196206/BLOG/PngItem_311914.png"
             alt="lang selector"
@@ -84,22 +76,22 @@ class languageSwitcher extends Component {
             <img
               src="https://res.cloudinary.com/cinforme/image/upload/v1582388051/BLOG/en.png"
               alt="English flag"
-            />{" "}
-            {t("en")}
+            />{' '}
+            {t('en')}
           </Dropdown.Item>
           <Dropdown.Item onSelect={this.handleChange} eventKey="fr" value="fr">
             <img
               src="https://res.cloudinary.com/cinforme/image/upload/v1582388051/BLOG/fr.png"
               alt="French flag"
-            />{" "}
-            {t("fr")}
+            />{' '}
+            {t('fr')}
           </Dropdown.Item>
           <Dropdown.Item onSelect={this.handleChange} eventKey="pt" value="pt">
             <img
               src="https://res.cloudinary.com/cinforme/image/upload/v1582388051/BLOG/pt.png"
               alt="Portuguese flag"
-            />{" "}
-            {t("pt")}
+            />{' '}
+            {t('pt')}
           </Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>

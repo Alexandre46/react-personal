@@ -1,7 +1,7 @@
 body {
   margin: 0;
   overflow-x: hidden !important;
-  font-family: "Josefin Sans", cursive;
+  font-family: 'Josefin Sans', cursive;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -15,6 +15,5 @@ footer {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }

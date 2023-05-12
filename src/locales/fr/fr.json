@@ -1,5 +1,5 @@
 {
-  "translations": {
+  "translation": {
     "en": "Anglais",
     "fr": "Français",
     "pt": "Portugais",
@@ -15,6 +15,7 @@
     "contactEmail": "Courrier",
     "contactMessage": "Message",
     "contactSend": "Envoyer",
+    "contactClear": "Nettoyer",
     "contactWithSuccess": "E-mail envoyé avec succès",
     "contactWithError": "Oups ! L'e-mail n'a pas été envoyé. Veuillez réessayer plus tard",
 
@@ -23,7 +24,7 @@
     "menuProjects": "Projets",
     "menuResume": "Resumé",
     "menuCV": "CV",
-    "menuAboutMe": "À propos de moi",
+    "menuAboutMe": "À propos",
     "menuContact": "Contact",
 
     "aboutMeInfo": "Il y a beaucoup de choses que je peux dire, mais en gros je suis un programmeur portugais plus en détail de l'île fantastique de Madère, je suis né en 1990 et je suis passionné de programmation. Parfois je rentre chez moi et passe du temps à essayer de créer de nouveaux projets personnels pour essayer de nouvelles technologies, outils ou langages. J'ai commencé cet intérêt pour les ordinateurs dès l'âge de 7 à 8 ans lorsque mes parents ont acheté notre premier ordinateur personnel. Au lycée, j'ai décidé de suivre un cours d'informatique technique au lieu d'un cours général, et quand je suis allé à l'université, j'ai choisi le génie informatique. J'ai terminé mon diplôme en informatique en 2014 et depuis 2016 je travaille sur le développement de logiciels, actuellement je suis dans la deuxième entreprise depuis l'université. J'ai travaillé dans plusieurs domaines tels que les plateformes de contenu multimédia (films, séries), la production de boissons (MES), les plateformes bancaires et de contenu, et actuellement je travaille dans une société informatique dans le domaine des événements de tourisme de loisirs avec connexion à Blockchain, ce qui donne une certaine expérience dans le backend et aussi dans le domaine frontend, que j'espère continuer à développer. Après tout, la connaissance n'est jamais trop, et c'est le meilleur pouvoir que nous puissions avoir !",
@@ -93,6 +94,7 @@
     "cv-download-cv": "Télécharger le CV",
     "cv-select-option": "Sélectionnez une option",
     "cv-resume": "Résumé",
-    "cv-complet": "Complet"
+    "cv-complet": "Complet",
+    "cv-newest": "Novo"
   }
 }
