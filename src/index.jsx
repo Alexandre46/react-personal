@@ -24,11 +24,7 @@ const siteKey = process.env.REACT_APP_SITE_KEY;
 
 const contentContainer = document.getElementById('content');
 const root = createRoot(contentContainer);
-root.render(
-  <GoogleReCaptchaProvider reCaptchaKey={siteKey}>
-    <Navigation />
-  </GoogleReCaptchaProvider>
-);
+root.render(<Navigation />);
 
 const headerContainer = document.getElementById('header');
 const rootHeader = createRoot(headerContainer);

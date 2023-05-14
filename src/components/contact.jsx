@@ -12,6 +12,7 @@ const emailJsTemplateId = 'template_0GCXxagz';
 const emailJsUserId = 'user_dNokYX5Ebo1aMAvjNj39O';
 
 const Contact: FC = () => {
+  const form = useRef();
   const [token, setToken] = useState();
   const [refreshReCaptcha, setRefreshReCaptcha] = useState(false);
   const [isValidRecaptcha, setIsValidRecaptcha] = useState(false);
@@ -34,41 +35,11 @@ const Contact: FC = () => {
     setLoading(false);
   };
 
-  const handleClick = () => {
-    //handle reCaptcha on button click
-    setLoading(true);
-    const response = submitData(token);
-    console.log('response', response);
-  };
-
-  const submitData = (token) => {
-    // call a backend API to verify reCAPTCHA response
-    fetch(`https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
-      body: JSON.stringify({
-        name: name,
-        email: email,
-        'g-recaptcha-response': token
-      })
-    })
-      .then((res) => res.json())
-      .then((res) => {
-        console.log('res', res);
-        setLoading(false);
-        return res;
-      });
-  };
-
   const sendEmail = (e) => {
     e.preventDefault();
-    console.log('isValidRecaptcha', isValidRecaptcha);
-    if (isValidRecaptcha) {
+    try {
       emailjs
-        .sendForm('gmail', emailJsTemplateId, e.target, emailJsUserId)
+        .sendForm('gmail', emailJsTemplateId, form.current, emailJsUserId)
 
         .then(
           (result) => {
@@ -80,16 +51,17 @@ const Contact: FC = () => {
             document.getElementById('email-success').classList.add('d-none');
           }
         );
-      resetForm();
-    } else {
-      alert('Please check your reCaptcha before sending your email');
+    } catch (error) {
+      console.log('error', error);
     }
+
+    resetForm();
   };
 
   return (
     <div className="row mt-3 pt-5">
       <span className="col-12"> {t('contactLabel')}</span>
-      <Form className="col-12 contact-form" onSubmit={sendEmail}>
+      <Form ref={form} className="col-12 contact-form" onSubmit={sendEmail}>
         <div className="col-12 mt-4 form-group">
           <div id="email-success" className="d-none bg-success alert-success">
             {' '}
@@ -141,9 +113,8 @@ const Contact: FC = () => {
               className="btn btn-block w-100 btn-outline-success"
               type="submit"
               value={t('contactSend')}
-              onClick={() => handleClick()}
+              onClick={sendEmail}
             />
-            <GoogleReCaptcha siteKey={siteKey} render="explicit" onVerify={() => setToken(token)} />
           </div>
 
           <div className="col-12 col-lg-6 form-group">
