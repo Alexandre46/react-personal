@@ -12,6 +12,10 @@ const emailJsTemplateId = 'template_0GCXxagz';
 const emailJsUserId = 'user_dNokYX5Ebo1aMAvjNj39O';
 
 const Contact: FC = () => {
+  // reCaptcha v3 hooks
+  const { executeRecaptcha } = useGoogleReCaptcha();
+  const [actionToChange, setActionToChange] = useState('');
+
   const form = useRef();
   const [token, setToken] = useState();
   const [refreshReCaptcha, setRefreshReCaptcha] = useState(false);
@@ -35,31 +39,52 @@ const Contact: FC = () => {
     setLoading(false);
   };
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
-    try {
-      emailjs
-        .sendForm('gmail', emailJsTemplateId, form.current, emailJsUserId)
-
-        .then(
-          (result) => {
-            document.getElementById('email-success').classList.remove('d-none');
-            document.getElementById('email-error').classList.add('d-none');
-          },
-          (error) => {
-            document.getElementById('email-error').classList.remove('d-none');
-            document.getElementById('email-success').classList.add('d-none');
-          }
-        );
-    } catch (error) {
-      console.log('error', error);
+    if (!executeRecaptcha) {
+      return;
     }
+    const result = await executeRecaptcha('register');
+    setToken(result);
+    console.log('result', result);
 
-    resetForm();
+    if (token) {
+      console.log('token', token);
+      try {
+        emailjs
+          .sendForm('gmail', emailJsTemplateId, form.current, emailJsUserId)
+
+          .then(
+            (result) => {
+              document.getElementById('email-success').classList.remove('d-none');
+              document.getElementById('email-error').classList.add('d-none');
+            },
+            (error) => {
+              document.getElementById('email-error').classList.remove('d-none');
+              document.getElementById('email-success').classList.add('d-none');
+            }
+          );
+      } catch (error) {
+        console.log('error', error);
+      }
+
+      resetForm();
+    }
   };
 
+  useEffect(() => {
+    if (!executeRecaptcha) {
+      return;
+    }
+    const handleReCaptchaVerify = async () => {
+      const token = await executeRecaptcha('register');
+      setToken(token);
+    };
+    handleReCaptchaVerify();
+  }, [executeRecaptcha]);
+
   return (
-    <div className="row mt-3 pt-5">
+    <div className="row mt-3 pt-5" id="contact-form">
       <span className="col-12"> {t('contactLabel')}</span>
       <Form ref={form} className="col-12 contact-form" onSubmit={sendEmail}>
         <div className="col-12 mt-4 form-group">

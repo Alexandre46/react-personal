@@ -9,9 +9,13 @@ import BlogPosts from './Blog';
 import Contact from './contact';
 import Resume from './Resume';
 import CurriculumVitae from './CurriculumVitae';
+import { GoogleReCaptcha, GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
+
+//Google reCaptcha v3
+const siteKey = process.env.REACT_APP_SITE_KEY;
 
 const history = createBrowserHistory({
-  basename: process.env.PUBLIC_URL,
+  basename: process.env.PUBLIC_URL
 });
 
 const Navigation = () => {
@@ -24,7 +28,14 @@ const Navigation = () => {
         <Route path={`${process.env.PUBLIC_URL}/resume`} element={<Resume />} />
         <Route path={`${process.env.PUBLIC_URL}/cv`} element={<CurriculumVitae />} />
         <Route path={`${process.env.PUBLIC_URL}/about-me`} element={<AboutMe />} />
-        <Route path={`${process.env.PUBLIC_URL}/contact`} element={<Contact />} />
+        <Route
+          path={`${process.env.PUBLIC_URL}/contact`}
+          element={
+            <GoogleReCaptchaProvider reCaptchaKey={siteKey} language="PT-pt">
+              <Contact />
+            </GoogleReCaptchaProvider>
+          }
+        />
       </Routes>
     </HashRouter>
   );

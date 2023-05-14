@@ -12,15 +12,11 @@ import 'jquery/dist/jquery.min.js';
 import './assets/scss/index.scss';
 // imports for i18n
 import i18n from './components/i18n';
-import { GoogleReCaptcha, GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
 // Immport React Google Anaylitics
 const trackingId = 'UA-159999549-1';
 ReactGA.initialize(trackingId);
 ReactGA.pageview(window.location.pathname + window.location.search);
-
-//Google reCaptcha v3
-const siteKey = process.env.REACT_APP_SITE_KEY;
 
 const contentContainer = document.getElementById('content');
 const root = createRoot(contentContainer);
