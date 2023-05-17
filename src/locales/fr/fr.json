@@ -1,31 +1,100 @@
 {
-    "translations" : {
-        "en" : "Anglais",
-        "fr" : "Français",
-        "pt" : "Portugais",
+  "translation": {
+    "en": "Anglais",
+    "fr": "Français",
+    "pt": "Portugais",
 
-        "introInitial" : "Salut, mon nom est ",
-        "introEnd" : " et naviguez pour découvrir plus de moi",
-        "introMore" : "Je suis développeur de logiciels avec {{age}} ans de l'île de Madère, au Portugal",
-        "introSentence" : "Knowledge is power. – Francis Bacon",
+    "introInitial": "Salut, mon nom est ",
+    "introEnd": " et naviguez pour découvrir plus de moi",
+    "introMore": "Je suis développeur de logiciels avec {{age}} ans de l'île de Madère, au Portugal",
+    "introSentence": "Knowledge is power. – Francis Bacon",
 
-        "socialLabel" : "Retrouvez moi sur:",
-        "contactLabel" : "Contactez nous:", 
-        "contactName" : "Nom",
-        "contactEmail" : "Courrier",
-        "contactMessage" : "Message",
-        "contactSend" : "Envoyer",
+    "socialLabel": "Retrouvez moi sur:",
+    "contactLabel": "Contactez nous:",
+    "contactName": "Nom",
+    "contactEmail": "Courrier",
+    "contactMessage": "Message",
+    "contactSend": "Envoyer",
+    "contactClear": "Nettoyer",
+    "contactWithSuccess": "E-mail envoyé avec succès",
+    "contactWithError": "Oups ! L'e-mail n'a pas été envoyé. Veuillez réessayer plus tard",
 
-        "menuHome" : "Accueil",
-        "menuBlog" : "Blog",
-        "menuProjects" : "Projets",
-        "menuAboutMe" : "À propos de moi",
-        "menuContact" : "Contact",
+    "menuHome": "Accueil",
+    "menuBlog": "Blog",
+    "menuProjects": "Projets",
+    "menuResume": "Resumé",
+    "menuCV": "CV",
+    "menuAboutMe": "À propos",
+    "menuContact": "Contact",
 
-        "aboutMeInfo" : "Il y a beaucoup de choses dont je peux parler mais, fondamentalement, je suis un codeur portugais de 29 ans qui aime vraiment ce travail.J'ai toujours été curieux de découvrir de nouvelles choses dans ce domaine, de commencer à interagir avec les ordinateurs depuis mes 7 à 8 ans. quand mes parents ont acheté notre premier ordinateur personnel. Au collège, j'ai décidé d'aller à un cours technique au lieu d'un domaine normal / commun, et d'aller à l'université pour obtenir un diplôme en informatique. Terminé mon CS @ 2014 et depuis 2016 je travaille sur le développement logiciel, je suis actuellement en deuxième entreprise depuis l'université. J'ai travaillé sur des projets VOD (vidéo à la demande), des services bancaires par Internet et des projets d'actualités",
+    "aboutMeInfo": "Il y a beaucoup de choses que je peux dire, mais en gros je suis un programmeur portugais plus en détail de l'île fantastique de Madère, je suis né en 1990 et je suis passionné de programmation. Parfois je rentre chez moi et passe du temps à essayer de créer de nouveaux projets personnels pour essayer de nouvelles technologies, outils ou langages. J'ai commencé cet intérêt pour les ordinateurs dès l'âge de 7 à 8 ans lorsque mes parents ont acheté notre premier ordinateur personnel. Au lycée, j'ai décidé de suivre un cours d'informatique technique au lieu d'un cours général, et quand je suis allé à l'université, j'ai choisi le génie informatique. J'ai terminé mon diplôme en informatique en 2014 et depuis 2016 je travaille sur le développement de logiciels, actuellement je suis dans la deuxième entreprise depuis l'université. J'ai travaillé dans plusieurs domaines tels que les plateformes de contenu multimédia (films, séries), la production de boissons (MES), les plateformes bancaires et de contenu, et actuellement je travaille dans une société informatique dans le domaine des événements de tourisme de loisirs avec connexion à Blockchain, ce qui donne une certaine expérience dans le backend et aussi dans le domaine frontend, que j'espère continuer à développer. Après tout, la connaissance n'est jamais trop, et c'est le meilleur pouvoir que nous puissions avoir !",
 
-        "notFound" : "Pas trouvé",
-        "backHome" : "Arrivez accueil"
+    "notFound": "Pas trouvé",
+    "backHome": "Arrivez accueil",
 
-    }
+    "resume-newest-title": "Yacooba - Fullstack developer",
+    "resume-newest-subtitle": "Remote",
+    "resume-newest-text": "De par la fascination du monde de la blockchain, j'ai fini par vouloir changer de carrière, j'ai senti qu'il fallait que je pousse ma voie et me lance de nouveaux défis visuels (Atomic Design) avec des composants React, accompagnés de tests unitaires et Storybook pour valider la mise en place du même composant. Les pages de chacun des microfrontends que nous avons dans notre projet NextJS sont servies statiquement au moment de la construction (SSG). Je développe la solution backend de l'entreprise avec une approche de développement axée sur le domaine, dans laquelle je conclus que lors de la transposition de la logique métier, il est plus difficile pour les erreurs de se produire dans le backend, j'utilise actuellement nodeJS avec dactylographie. J'ai eu des contacts avec des contrats intelligents (solidité) utilisant les standards openzeppelin avec l'aide de hardhat et lib ethers.js et web3.js en lançant un contrat réalisé en ERC721 sur le réseau Ethereum",
+    "resume-newest-note": "",
+    "resume-newest-tech-summary": [
+      "TypeScript",
+      "NextJS",
+      "MaterialUI",
+      "Storybook",
+      "Git",
+      "NodeJS",
+      "DDD",
+      "Postgres",
+      "GraphQL",
+      "ethers",
+      "web3",
+      "Hardhat",
+      "Solidity",
+      "Blockchain"
+    ],
+
+    "resume-first-title": "Nearsoft Solutions - Fullstack developer",
+    "resume-first-subtitle": "Funchal, Madeira / Portugal",
+    "resume-first-text": "A commencé dans cette entreprise en tant que consultant pour la société irlandaise de boissons OrbisMES, en utilisant MSQL, en examinant les procédures T-SQL / stockées et en analysant tous les flux de bière pour l'entreprise. Travaillant actuellement avec la pile Laravel en utilisant MySQL, les API RESTFul rendent les frontaux avec vanilla js en utilisant SCSS avec le framework Bootstrap. Nous utilisons le docker quotidien pour emballer tous les projets avec le système de contrôle de version git et utilisons des services AWS comme ECR pour stocker toutes les images docker, servir des actifs avec S3 et stocker des données avec RDS principalement MySQL. Travailler avec des pipelines CI / CD connectés à notre compte gitlab et quelques règles strictes (*) sur les tests unitaires / les linters de code. J'ai eu le privilège de former (sur site) et d'accompagner (à distance) une équipe de travail en Macédoine composée de 3 personnes.",
+    "resume-first-note": "Par des règles strictes, toute demande de fusion peut UNIQUEMENT être approuvée si elle réussit un pourcentage de couverture de test sur les tests unitaires",
+    "resume-first-tech-summary": [
+      "PHP",
+      "JavaScript",
+      "CSS",
+      "Bootstrap",
+      "SCSS",
+      "HTML",
+      "Docker",
+      "Git",
+      "AWS",
+      "CLI"
+    ],
+
+    "resume-second-title": "TV App Agency - Backend Developer",
+    "resume-second-subtitle": "Funchal, Madeira / Portugal",
+    "resume-second-text": "Développement d'apis pour servir du contenu pour des applications VOD telles que blockbuster / systèmes similaires à netflix, création de backoffices d'administration pour contrôler le contenu (en profitant de Bootstrap pour accélérer la visualisation des panneaux). Configurez certaines tâches cron pour ingérer automatiquement du contenu sur le backend à introduire dans les bases de données MySQL, avec Laravel Schedule et l'utilisation de l'ORM Eloquent de Laravel pour manipuler les données de la base de données et les transformer en réponses API, en utilisant Postman pour pouvoir tester ces services .",
+    "resume-second-tech-summary": [
+      "RESTful",
+      "PHP",
+      "jQuery",
+      "CSS",
+      "HTML",
+      "SVN",
+      "Laravel Scheduler /cronjobs"
+    ],
+
+    "resume-third-title": "Étudiant / Freelancer",
+    "resume-third-subtitle": "Funchal, Madeira / Portugal",
+    "resume-third-text": "Il a été proposé de développer une plate-forme publicitaire basée sur wordpress, dans laquelle il serait nécessaire de créer des fonctions PHP pour certaines actions sur la plate-forme, et en suivant les directives du concepteur qui a conçu des maquettes pour la plate-forme. Un système d'abonnement a également été créé pour cela, ce qui donnerait plus de visibilité aux annonces envoyées par les utilisateurs payants de la plateforme. Avec cette expérience j'ai acquis une autonomie pour pouvoir estimer / réaliser des travaux en dehors de l'environnement scolaire / universitaire et pour pouvoir avoir une approche plus réelle des difficultés de la zone, traitant les problèmes qu'un système traite lorsqu'il interagit. l'utilisateur final.",
+
+    "cv-page": "Page",
+    "cv-of": "sur",
+    "cv-previous": "Précédent",
+    "cv-next": "Suivant",
+    "cv-download-cv": "Télécharger le CV",
+    "cv-select-option": "Sélectionnez une option",
+    "cv-resume": "Résumé",
+    "cv-complet": "Complet",
+    "cv-newest": "Novo"
+  }
 }
