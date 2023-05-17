@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3e636a0e.css",
+    "main.js": "/static/js/main.37af6d5a.js",
+    "static/media/cv.pdf": "/static/media/cv.33ccace5888773803979.pdf",
+    "pdf.worker.js": "/34ffc01b7205fa9df05f319bc3b9355c.js",
+    "static/media/cv-redesign.pdf": "/static/media/cv-redesign.efcfcb718a9a359be739.pdf",
+    "static/media/cv-atualizado-2023.pdf": "/static/media/cv-atualizado-2023.c92fcf574b9c3f161731.pdf",
+    "static/media/selfie.jpg": "/static/media/selfie.3b77154e38fa79b4357a.jpg",
+    "static/media/nearsoft.png": "/static/media/nearsoft.87d1935b77b27867eef3.png",
+    "index.html": "/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.3e636a0e.css",
+    "static/js/main.37af6d5a.js"
+  ]
+}
