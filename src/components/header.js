@@ -50,8 +50,12 @@ class Header extends Component {
                   className="nav-link menu-link">
                   {t('menuContact')}{' '}
                 </NavLink>
-                <LanguageSwitcher />
-                <Switcher />
+                <NavLink>
+                  <LanguageSwitcher />
+                </NavLink>
+                <NavLink>
+                  <Switcher />
+                </NavLink>
               </Nav>
             </Navbar.Collapse>
           </Col>
