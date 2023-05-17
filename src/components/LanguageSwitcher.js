@@ -3,16 +3,15 @@ import { Dropdown, FormControl } from 'react-bootstrap';
 import { withTranslation } from 'react-i18next';
 import i18n from './i18n';
 
+const handleChange = (event) => {
+  console.log('event', event);
+  const newlang = event;
+  i18n.changeLanguage(newlang);
+};
+
 class languageSwitcher extends Component {
   state = {
     value: 'en'
-  };
-
-  handleChange = (event) => {
-    console.log('event', event);
-    const newlang = event;
-    this.setState((prevState) => ({ value: newlang }));
-    i18n.changeLanguage(newlang);
   };
 
   // The forwardRef is important!!
@@ -56,7 +55,7 @@ class languageSwitcher extends Component {
   );
 
   render() {
-    const { t } = this.props;
+    const { i18n, t } = this.props;
     return (
       <Dropdown>
         <Dropdown.Toggle
@@ -72,21 +71,33 @@ class languageSwitcher extends Component {
         </Dropdown.Toggle>
 
         <Dropdown.Menu as={CustomMenu}>
-          <Dropdown.Item onSelect={this.handleChange} eventKey="en" value="en">
+          <Dropdown.Item
+            onClick={() => handleChange('en')}
+            eventKey="en"
+            value="en"
+            active={i18n.language === 'en'}>
             <img
               src="https://res.cloudinary.com/cinforme/image/upload/v1582388051/BLOG/en.png"
               alt="English flag"
             />{' '}
             {t('en')}
           </Dropdown.Item>
-          <Dropdown.Item onSelect={this.handleChange} eventKey="fr" value="fr">
+          <Dropdown.Item
+            onClick={() => handleChange('fr')}
+            eventKey="fr"
+            value="fr"
+            active={i18n.language === 'fr'}>
             <img
               src="https://res.cloudinary.com/cinforme/image/upload/v1582388051/BLOG/fr.png"
               alt="French flag"
             />{' '}
             {t('fr')}
           </Dropdown.Item>
-          <Dropdown.Item onSelect={this.handleChange} eventKey="pt" value="pt">
+          <Dropdown.Item
+            onClick={() => handleChange('pt')}
+            eventKey="pt"
+            value="pt"
+            active={i18n.language === 'pt'}>
             <img
               src="https://res.cloudinary.com/cinforme/image/upload/v1582388051/BLOG/pt.png"
               alt="Portuguese flag"

@@ -13,7 +13,6 @@ i18n
   .use(LanguageDetector)
   .init({
     debug: true,
-    lng: 'pt',
     fallbackLng: 'en', // use en if detected lng is not available
     keySeparator: false, // we do not use keys in form messages.welcome
     interpolation: {
