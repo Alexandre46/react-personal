@@ -1,0 +1,93 @@
+{
+  "name": "react-app",
+  "description": " This serves my personal blog purpose, to show to world my works",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/core": "^11.0.0",
+    "@emotion/styled": "^11.10.0",
+    "@react-pdf/renderer": "^2.3.0",
+    "bootstrap": "^5.2.0",
+    "dotenv": "^16.0.1",
+    "dotenv-expand": "^8.0.3",
+    "emailjs-com": "^2.4.1",
+    "emotion-theming": "^11.0.0",
+    "gh-pages": "^4.0.0",
+    "history": "^5.3.0",
+    "i18next": "^21.9.0",
+    "i18next-browser-languagedetector": "^6.1.8",
+    "i18next-http-backend": "^1.4.1",
+    "i18next-xhr-backend": "^3.2.2",
+    "import-all.macro": "^3.1.0",
+    "jquery": "^3.6.0",
+    "mdx.macro": "^0.2.9",
+    "moment": "^2.29.4",
+    "node-sass": "^7.0.1",
+    "pm2": "^5.2.0",
+    "popper": "^1.0.1",
+    "popper.js": "^1.16.1",
+    "radium": "^0.26.2",
+    "react": "^18.2.0",
+    "react-animations": "^1.0.0",
+    "react-bootstrap": "^2.5.0",
+    "react-dom": "^18.2.0",
+    "react-fade-in": "^2.0.1",
+    "react-ga": "^3.3.1",
+    "react-google-recaptcha-v3": "^1.10.0",
+    "react-i18next": "^11.18.3",
+    "react-loading": "^2.0.3",
+    "react-lottie": "^1.2.3",
+    "react-markdown": "^8.0.3",
+    "react-moment": "^1.1.2",
+    "react-pdf": "^5.7.2",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "^5.0.1",
+    "react-toast-notifications": "^2.5.1",
+    "react-vertical-timeline-component": "^3.5.2",
+    "serve": "^14.0.1",
+    "strapi-sdk-javascript": "^0.3.3",
+    "styled-components": "^5.3.5"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts --max_old_space_size=4096 start",
+    "build": "react-scripts --max_old_space_size=4096 build",
+    "test": "react-scripts test",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "lint": "eslint src/**/*.js src/**/*.jsx",
+    "lint:fix": "npm run lint -- --fix",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "homepage": "https://alexandreabreu.online",
+  "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@babel/eslint-parser": "^7.18.9",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.21.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "postcss-loader": "^7.0.1",
+    "prettier": "^2.7.1"
+  }
+}
