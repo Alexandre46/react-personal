@@ -5,11 +5,12 @@ import { createBrowserHistory } from 'history';
 import AboutMe from './AboutMe';
 import Welcome from './welcome';
 import MyProjects from './Projects';
-import BlogPosts from './Blog';
 import Contact from './contact';
 import Resume from './Resume';
 import CurriculumVitae from './CurriculumVitae';
 import { GoogleReCaptcha, GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
+import Blog from './Blog';
+import BlogDetails from './BlogDetails';
 
 //Google reCaptcha v3
 const siteKey = process.env.REACT_APP_SITE_KEY;
@@ -23,7 +24,8 @@ const Navigation = () => {
     <HashRouter history={history} basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route exact path={`${process.env.PUBLIC_URL}/`} element={<Welcome />} />
-        <Route path={`${process.env.PUBLIC_URL}/blog`} element={<BlogPosts />} />
+        <Route path={`${process.env.PUBLIC_URL}/blog`} element={<Blog />} />
+        <Route path={`${process.env.PUBLIC_URL}/blog/:blogId`} element={<BlogDetails />} />
         <Route path={`${process.env.PUBLIC_URL}/projects`} element={<MyProjects />} />
         <Route path={`${process.env.PUBLIC_URL}/resume`} element={<Resume />} />
         <Route path={`${process.env.PUBLIC_URL}/cv`} element={<CurriculumVitae />} />
