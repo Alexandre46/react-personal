@@ -4,6 +4,7 @@ import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 import CV from '../../src/cv.pdf';
 import CVRedesign from '../../src/cv-redesign.pdf';
 import CVNewest from '../../src/cv-atualizado-2023.pdf';
+import CVEN from '../../src/cv-en.pdf';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
@@ -18,6 +19,7 @@ const styles = {
 };
 
 const selectors = {
+  en: 'en',
   newest: 'newest',
   resume: 'resume',
   complete: 'complete'
@@ -44,6 +46,9 @@ const CurriculumVitae = () => {
 
   const showSpecificFile = (string) => {
     switch (string) {
+      case selectors.en:
+        setCvFile(CVEN);
+        break;
       case selectors.newest:
         setCvFile(CVNewest);
         break;
@@ -72,6 +77,18 @@ const CurriculumVitae = () => {
         </Col>
       </Row>
       <Row style={{ display: 'flex', justifyContent: 'center' }}>
+        <Col xs="auto">
+          <button
+            type="button"
+            className={
+              cvSelected === selectors.en
+                ? 'btn btn-primary active btn-outline-info'
+                : 'btn btn-primary'
+            }
+            onClick={() => changeCvSelected(selectors.en)}>
+            {t('cv-en')}
+          </button>
+        </Col>
         <Col xs="auto">
           <button
             type="button"
